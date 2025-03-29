@@ -14,10 +14,10 @@ public class BookService {
         emf = Persistence.createEntityManagerFactory("LibraryDBPU");
     }
 
-    public void addBook(String title, String author, int year, boolean available) {
+    public void addBook(String title, String author, int publicationYear, boolean available) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        Book book = new Book(title, author, year, available);
+        Book book = new Book(title, author, publicationYear, available);
         em.persist(book);
         em.getTransaction().commit();
         em.close();

@@ -11,17 +11,17 @@ public class Book {
     private String title;
     private String author;
 
-    @Column(name = "year", nullable = false)
-    private int year;
+    @Column(name = "publication_year", nullable = false)
+    private int publicationYear;
 
     private boolean available;
 
     public Book() {}
 
-    public Book(String title, String author, int year, boolean available) {
+    public Book(String title, String author, int publicationYear, boolean available) {
         this.title = title;
         this.author = author;
-        this.year = year;
+        this.publicationYear = publicationYear;
         this.available = available;
     }
 
