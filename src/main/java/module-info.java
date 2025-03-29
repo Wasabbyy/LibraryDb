@@ -2,16 +2,18 @@ module org.example.librarydb {
     requires javafx.controls;
     requires javafx.fxml;
 
-    // JPA a Hibernate
+    // JPA and Hibernate
     requires jakarta.persistence;
     requires org.hibernate.orm.core;
 
-    // H2 databáze (pokud chceš jinou, uprav to)
-    requires java.sql;
+    // H2 database (if you want another, adjust it)
+    requires org.apache.logging.log4j;
 
-    // Otevření balíčků pro Hibernate (JPA potřebuje přístup k entitám)
+    // Open packages for Hibernate (JPA needs access to entities)
     opens org.example.librarydb to javafx.fxml, org.hibernate.orm.core;
-    opens org.example.librarydb.model to org.hibernate.orm.core; // Pokud ukládáš entity do samostatného balíčku
+    opens org.example.librarydb.model to org.hibernate.orm.core; // If you store entities in a separate package
 
     exports org.example.librarydb;
+    exports org.example.librarydb.model;
+    exports org.example.librarydb.service;
 }
