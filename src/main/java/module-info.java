@@ -16,4 +16,6 @@ module org.example.librarydb {
     exports org.example.librarydb;
     exports org.example.librarydb.model;
     exports org.example.librarydb.service;
+    exports org.example.librarydb.controllers;
+    opens org.example.librarydb.controllers to javafx.fxml, org.hibernate.orm.core;
 }

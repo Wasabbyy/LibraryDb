@@ -33,4 +33,13 @@ public class BookService {
     public void close() {
         emf.close();
     }
+    // BookService.java
+    public Book getBookById(Long id) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            return em.find(Book.class, id);
+        } finally {
+            em.close();
+        }
+    }
 }

@@ -33,4 +33,13 @@ public class ReaderService {
     public void close() {
         emf.close();
     }
+    // ReaderService.java
+    public Reader getReaderById(Long id) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            return em.find(Reader.class, id);
+        } finally {
+            em.close();
+        }
+    }
 }

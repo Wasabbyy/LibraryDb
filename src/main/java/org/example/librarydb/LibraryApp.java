@@ -4,12 +4,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.example.librarydb.HelloController;
 
 public class LibraryApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("intro-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Library App");
         stage.setScene(scene);
@@ -18,8 +17,7 @@ public class LibraryApp extends Application {
 
     @Override
     public void stop() throws Exception {
-        HelloController controller = new HelloController();
-        controller.close();
+        // Perform any necessary cleanup here
     }
 
     public static void main(String[] args) {
