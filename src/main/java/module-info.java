@@ -1,4 +1,4 @@
-module org.example.librarydb {
+module com.vse.librarydb {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -10,12 +10,12 @@ module org.example.librarydb {
     requires org.apache.logging.log4j;
 
     // Open packages for Hibernate (JPA needs access to entities)
-    opens org.example.librarydb to javafx.fxml, org.hibernate.orm.core;
-    opens org.example.librarydb.model to org.hibernate.orm.core; // If you store entities in a separate package
+    opens com.vse.librarydb to javafx.fxml, org.hibernate.orm.core;
+    opens com.vse.librarydb.model to org.hibernate.orm.core; // If you store entities in a separate package
 
-    exports org.example.librarydb;
-    exports org.example.librarydb.model;
-    exports org.example.librarydb.service;
-    exports org.example.librarydb.controllers;
-    opens org.example.librarydb.controllers to javafx.fxml, org.hibernate.orm.core;
+    exports com.vse.librarydb;
+    exports com.vse.librarydb.model;
+    exports com.vse.librarydb.service;
+    exports com.vse.librarydb.controllers;
+    opens com.vse.librarydb.controllers to javafx.fxml, org.hibernate.orm.core;
 }

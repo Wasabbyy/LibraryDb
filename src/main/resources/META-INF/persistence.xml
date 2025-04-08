@@ -4,9 +4,9 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
     <persistence-unit name="LibraryDBPU" transaction-type="RESOURCE_LOCAL">
-        <class>org.example.librarydb.model.Book</class>
-        <class>org.example.librarydb.model.Loan</class>
-        <class>org.example.librarydb.model.Reader</class>
+        <class>com.vse.librarydb.model.Book</class>
+        <class>com.vse.librarydb.model.Loan</class>
+        <class>com.vse.librarydb.model.Reader</class>
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:./data/librarydb"/>
             <property name="jakarta.persistence.jdbc.user" value="sa"/>
