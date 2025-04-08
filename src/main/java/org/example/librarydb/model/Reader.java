@@ -13,7 +13,7 @@ public class Reader {
     private String lastName;
     private String email;
 
-    @OneToMany(mappedBy = "reader")
+    @OneToMany(mappedBy = "reader", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Loan> loans;
 
     public Reader() {
@@ -25,6 +25,10 @@ public class Reader {
         this.email = email;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -33,5 +37,16 @@ public class Reader {
         return lastName;
     }
 
-
+    public String getEmail() {
+        return  email;
     }
+
+    public List<Loan> getLoans() {
+        return loans;
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + " (" + email + ")";
+    }
+}

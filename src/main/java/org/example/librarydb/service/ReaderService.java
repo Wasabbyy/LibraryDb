@@ -16,30 +16,45 @@ public class ReaderService {
 
     public void addReader(String firstName, String lastName, String email) {
         EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
-        Reader reader = new Reader(firstName, lastName, email);
-        em.persist(reader);
-        em.getTransaction().commit();
-        em.close();
+        try {
+            em.getTransaction().begin();
+            Reader reader = new Reader(firstName, lastName, email);
+            em.persist(reader);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
     }
 
     public List<Reader> getAllReaders() {
         EntityManager em = emf.createEntityManager();
-        List<Reader> readers = em.createQuery("SELECT r FROM Reader r", Reader.class).getResultList();
-        em.close();
-        return readers;
+        try {
+            return em.createQuery("SELECT r FROM Reader r", Reader.class).getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            em.close();
+        }
     }
 
-    public void close() {
-        emf.close();
-    }
-    // ReaderService.java
     public Reader getReaderById(Long id) {
         EntityManager em = emf.createEntityManager();
         try {
             return em.find(Reader.class, id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         } finally {
             em.close();
+        }
+    }
+
+    public void close() {
+        if (emf != null && emf.isOpen()) {
+            emf.close();
         }
     }
 }

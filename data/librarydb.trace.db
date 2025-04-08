@@ -2266,3 +2266,6 @@ The object is already closed [90007-224]
 2025-04-07 16:07:39.825696+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Tento objekt byl již uzavřen
 The object is already closed [90007-224]
+2025-04-08 14:46:25.827949+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Tento objekt byl již uzavřen
+The object is already closed [90007-224]

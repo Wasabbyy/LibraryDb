@@ -25,5 +25,41 @@ public class Book {
         this.available = available;
     }
 
-    // Getters and setters
+    // Getters
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getPublicationYear() {
+        return publicationYear;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    // Setters (optional, if needed)
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setPublicationYear(int publicationYear) {
+        this.publicationYear = publicationYear;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
 }
