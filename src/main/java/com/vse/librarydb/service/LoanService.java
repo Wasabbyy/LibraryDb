@@ -36,4 +36,20 @@ public class LoanService {
     public void close() {
         emf.close();
     }
+    public List<Loan> getLoansByReader(Reader reader) {
+        EntityManager em = emf.createEntityManager();
+        List<Loan> loans = em.createQuery("SELECT l FROM Loan l WHERE l.reader = :reader", Loan.class)
+                .setParameter("reader", reader)
+                .getResultList();
+        em.close();
+        return loans;
+    }
+    public List<Loan> getLoansByBook(Book book) {
+        EntityManager em = emf.createEntityManager();
+        List<Loan> loans = em.createQuery("SELECT l FROM Loan l WHERE l.book = :book", Loan.class)
+                .setParameter("book", book)
+                .getResultList();
+        em.close();
+        return loans;
+    }
 }

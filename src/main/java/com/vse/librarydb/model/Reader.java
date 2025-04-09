@@ -44,6 +44,9 @@ public class Reader {
     public List<Loan> getLoans() {
         return loans;
     }
+    public String getName() {
+        return firstName + " " + lastName;
+    }
 
     @Override
     public String toString() {

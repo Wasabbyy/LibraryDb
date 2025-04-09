@@ -25,15 +25,38 @@ public class ViewBooksController extends BaseController {
     public ViewBooksController() {
         bookService = new BookService();
     }
-
     @FXML
     public void initialize() {
         List<Book> books = bookService.getAllBooks();
         for (Book book : books) {
             booksListView.getItems().add(book.getTitle() + " by " + book.getAuthor() + " (" + book.getPublicationYear() + ")");
         }
+
+        booksListView.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) { // Double-click to open details
+                int selectedIndex = booksListView.getSelectionModel().getSelectedIndex();
+                if (selectedIndex >= 0) {
+                    Book selectedBook = books.get(selectedIndex);
+                    try {
+                        openBookDetails(selectedBook);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 
+    private void openBookDetails(Book book) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("/com/vse/librarydb/book-details.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        BookDetailsController controller = fxmlLoader.getController();
+        controller.setBook(book); // Pass the selected book to the new controller
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Book Details");
+        stage.show();
+    }
     @FXML
     protected void onReturnToMenuButtonClick() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("/com/vse/librarydb/view-data.fxml"));

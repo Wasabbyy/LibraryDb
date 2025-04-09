@@ -26,13 +26,7 @@ public class ViewReadersController extends BaseController {
         readerService = new ReaderService();
     }
 
-    @FXML
-    public void initialize() {
-        List<Reader> readers = readerService.getAllReaders();
-        for (Reader reader : readers) {
-            readersListView.getItems().add(reader.toString());
-        }
-    }
+
 
     @FXML
     protected void onReturnToMenuButtonClick() throws IOException {
@@ -40,6 +34,38 @@ public class ViewReadersController extends BaseController {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) backButton.getScene().getWindow(); // Use backButton to get the stage
         stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    public void initialize() {
+        List<Reader> readers = readerService.getAllReaders();
+        for (Reader reader : readers) {
+            readersListView.getItems().add(reader.getName() + " (" + reader.getEmail() + ")");
+        }
+
+        readersListView.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) { // Double-click to open details
+                int selectedIndex = readersListView.getSelectionModel().getSelectedIndex();
+                if (selectedIndex >= 0) {
+                    Reader selectedReader = readers.get(selectedIndex);
+                    try {
+                        openReaderDetails(selectedReader);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+    }
+
+    private void openReaderDetails(Reader reader) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("/com/vse/librarydb/reader-details.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        ReaderDetailsController controller = fxmlLoader.getController();
+        controller.setReader(reader); // Pass the selected reader to the new controller
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Reader Details");
         stage.show();
     }
 }
