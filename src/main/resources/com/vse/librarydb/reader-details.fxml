@@ -8,4 +8,8 @@
     <Label fx:id="readerEmailLabel" text="Email: " />
     <Label text="Loans:" />
     <ListView fx:id="loansListView" />
+    <Button text="Edit" onAction="#onEdit" />
+    <TextField fx:id="nameTextField" promptText="Edit Name" visible="false" />
+    <TextField fx:id="emailTextField" promptText="Edit Email" visible="false" />
+    <Button fx:id="saveButton" text="Save" onAction="#onSave" visible="false" />
 </VBox>

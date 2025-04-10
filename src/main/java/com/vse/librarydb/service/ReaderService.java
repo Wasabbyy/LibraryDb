@@ -39,6 +39,24 @@ public class ReaderService {
             em.close();
         }
     }
+    public void updateReader(Reader reader) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            Reader existingReader = em.find(Reader.class, reader.getId());
+            if (existingReader != null) {
+                existingReader.setFirstName(reader.getFirstName());
+                existingReader.setLastName(reader.getLastName());
+                existingReader.setEmail(reader.getEmail());
+            }
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            em.close();
+        }
+    }
+
 
     public Reader getReaderById(Long id) {
         EntityManager em = emf.createEntityManager();

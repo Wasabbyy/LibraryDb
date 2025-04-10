@@ -42,4 +42,22 @@ public class BookService {
             em.close();
         }
     }
+    public void updateBook(Book book) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            // Fetch the existing book from the database
+            Book existingBook = em.find(Book.class, book.getId());
+            if (existingBook != null) {
+                // Update only the fields that are being changed
+                existingBook.setTitle(book.getTitle());
+                existingBook.setAuthor(book.getAuthor());
+                existingBook.setPublicationYear(book.getPublicationYear());
+                // The loans relationship remains intact as the book's ID is unchanged
+            }
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
+    }
 }
