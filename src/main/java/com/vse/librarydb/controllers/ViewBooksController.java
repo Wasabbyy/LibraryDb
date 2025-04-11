@@ -25,11 +25,13 @@ public class ViewBooksController extends BaseController {
     public ViewBooksController() {
         bookService = new BookService();
     }
+
     @FXML
     public void initialize() {
         List<Book> books = bookService.getAllBooks();
         for (Book book : books) {
-            booksListView.getItems().add(book.getTitle() + " by " + book.getAuthor() + " (" + book.getPublicationYear() + ")");
+            String availability = book.isAvailable() ? "Available" : "Not Available";
+            booksListView.getItems().add(book.getTitle() + " by " + book.getAuthor() + " (" + book.getPublicationYear() + ") - " + availability);
         }
 
         booksListView.setOnMouseClicked(event -> {
@@ -57,6 +59,7 @@ public class ViewBooksController extends BaseController {
         stage.setTitle("Book Details");
         stage.show();
     }
+
     @FXML
     protected void onReturnToMenuButtonClick() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("/com/vse/librarydb/view-data.fxml"));

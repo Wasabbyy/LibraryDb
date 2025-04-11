@@ -8,4 +8,5 @@
     <Button text="Add Book" onAction="#onAddBookButtonClick" />
     <Button text="Add Loan" onAction="#onAddLoanButtonClick" />
     <Button text="View Data" onAction="#onViewDataButtonClick" />
+    <Button text="Return Books" onAction="#onReturnBooksButtonClick" />
 </VBox>

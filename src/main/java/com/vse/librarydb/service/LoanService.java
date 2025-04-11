@@ -17,11 +17,39 @@ public class LoanService {
         emf = Persistence.createEntityManagerFactory("LibraryDBPU");
     }
 
-    public void addLoan(Reader reader, Book book, LocalDate loanDate, LocalDate returnDate) {
+    public void addLoan(Reader reader, Book book, LocalDate loanDate) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        Loan loan = new Loan(reader, book, loanDate, returnDate);
+
+        // Set the book as unavailable
+        book.setAvailable(false);
+        em.merge(book);
+
+        // Create a new loan with a null return date
+        Loan loan = new Loan(reader, book, loanDate, null);
         em.persist(loan);
+
+        em.getTransaction().commit();
+        em.close();
+    }
+
+    public void returnBook(Long loanId) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        // Find the loan by ID
+        Loan loan = em.find(Loan.class, loanId);
+        if (loan != null && loan.getReturnDate() == null) {
+            // Set the return date to today's date
+            loan.setReturnDate(LocalDate.now());
+            em.merge(loan);
+
+            // Mark the book as available
+            Book book = loan.getBook();
+            book.setAvailable(true);
+            em.merge(book);
+        }
+
         em.getTransaction().commit();
         em.close();
     }
@@ -33,9 +61,6 @@ public class LoanService {
         return loans;
     }
 
-    public void close() {
-        emf.close();
-    }
     public List<Loan> getLoansByReader(Reader reader) {
         EntityManager em = emf.createEntityManager();
         List<Loan> loans = em.createQuery("SELECT l FROM Loan l WHERE l.reader = :reader", Loan.class)
@@ -44,6 +69,7 @@ public class LoanService {
         em.close();
         return loans;
     }
+
     public List<Loan> getLoansByBook(Book book) {
         EntityManager em = emf.createEntityManager();
         List<Loan> loans = em.createQuery("SELECT l FROM Loan l WHERE l.book = :book", Loan.class)
@@ -51,5 +77,9 @@ public class LoanService {
                 .getResultList();
         em.close();
         return loans;
+    }
+
+    public void close() {
+        emf.close();
     }
 }

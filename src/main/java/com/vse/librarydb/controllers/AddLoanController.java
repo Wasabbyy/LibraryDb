@@ -1,4 +1,3 @@
-// AddLoanController.java
 package com.vse.librarydb.controllers;
 
 import javafx.fxml.FXML;
@@ -20,8 +19,6 @@ public class AddLoanController extends BaseController {
     private TextField bookIdField;
     @FXML
     private TextField loanDateField;
-    @FXML
-    private TextField returnDateField;
 
     private LoanService loanService;
     private ReaderService readerService;
@@ -38,12 +35,16 @@ public class AddLoanController extends BaseController {
         Long readerId = Long.parseLong(readerIdField.getText());
         Long bookId = Long.parseLong(bookIdField.getText());
         LocalDate loanDate = LocalDate.parse(loanDateField.getText());
-        LocalDate returnDate = LocalDate.parse(returnDateField.getText());
 
         Reader reader = readerService.getReaderById(readerId);
         Book book = bookService.getBookById(bookId);
 
-        loanService.addLoan(reader, book, loanDate, returnDate);
+        if (book.isAvailable()) {
+            loanService.addLoan(reader, book, loanDate);
+        } else {
+            // Handle case where the book is not available
+            System.out.println("Book is not available for loan.");
+        }
     }
 
     @FXML
