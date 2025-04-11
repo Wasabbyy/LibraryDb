@@ -9,7 +9,7 @@
     <TextField fx:id="readerIdField" promptText="Reader ID"/>
     <TextField fx:id="bookIdField" promptText="Book ID"/>
     <TextField fx:id="loanDateField" promptText="Loan Date (YYYY-MM-DD)"/>
-    <TextField fx:id="returnDateField" promptText="Return Date (YYYY-MM-DD)"/>
+    <TextField fx:id="rentPeriodField" promptText="Rent Period (Days)"/>
     <Button text="Add Loan" onAction="#onAddLoanButtonClick"/>
     <Button text="Main Menu" onAction="#onReturnToMenuButtonClick" />
 </VBox>

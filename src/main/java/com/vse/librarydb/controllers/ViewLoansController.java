@@ -33,7 +33,8 @@ public class ViewLoansController extends BaseController {
             String loanDetails = "Reader: " + loan.getReader().toString() +
                     ", Book: " + loan.getBook().getTitle() +
                     ", Loan Date: " + loan.getLoanDate() +
-                    ", Return Date: " + (loan.getReturnDate() != null ? loan.getReturnDate() : "Not Returned");
+                    ", Return Date: " + (loan.getReturnDate() != null ? loan.getReturnDate() : "Not Returned") +
+                    ", Delayed: " + (loan.isDelayed() ? "Yes" : "No");
             loansListView.getItems().add(loanDetails);
         }
     }

@@ -19,6 +19,8 @@ public class AddLoanController extends BaseController {
     private TextField bookIdField;
     @FXML
     private TextField loanDateField;
+    @FXML
+    private TextField rentPeriodField; // New field for rent period
 
     private LoanService loanService;
     private ReaderService readerService;
@@ -35,14 +37,14 @@ public class AddLoanController extends BaseController {
         Long readerId = Long.parseLong(readerIdField.getText());
         Long bookId = Long.parseLong(bookIdField.getText());
         LocalDate loanDate = LocalDate.parse(loanDateField.getText());
+        int rentPeriodDays = Integer.parseInt(rentPeriodField.getText());
 
         Reader reader = readerService.getReaderById(readerId);
         Book book = bookService.getBookById(bookId);
 
         if (book.isAvailable()) {
-            loanService.addLoan(reader, book, loanDate);
+            loanService.addLoan(reader, book, loanDate, rentPeriodDays);
         } else {
-            // Handle case where the book is not available
             System.out.println("Book is not available for loan.");
         }
     }

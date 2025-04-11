@@ -17,7 +17,7 @@ public class LoanService {
         emf = Persistence.createEntityManagerFactory("LibraryDBPU");
     }
 
-    public void addLoan(Reader reader, Book book, LocalDate loanDate) {
+    public void addLoan(Reader reader, Book book, LocalDate loanDate, int rentPeriodDays) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
@@ -25,8 +25,8 @@ public class LoanService {
         book.setAvailable(false);
         em.merge(book);
 
-        // Create a new loan with a null return date
-        Loan loan = new Loan(reader, book, loanDate, null);
+        // Create a new loan
+        Loan loan = new Loan(reader, book, loanDate, null, false);
         em.persist(loan);
 
         em.getTransaction().commit();
@@ -42,6 +42,11 @@ public class LoanService {
         if (loan != null && loan.getReturnDate() == null) {
             // Set the return date to today's date
             loan.setReturnDate(LocalDate.now());
+
+            // Check if the book is returned late
+            LocalDate dueDate = loan.getLoanDate().plusDays(14); // Example: 14-day rent period
+            loan.setDelayed(loan.getReturnDate().isAfter(dueDate));
+
             em.merge(loan);
 
             // Mark the book as available
@@ -59,9 +64,14 @@ public class LoanService {
         List<Loan> loans = em.createQuery("SELECT l FROM Loan l", Loan.class).getResultList();
         em.close();
         return loans;
-    }
-
-    public List<Loan> getLoansByReader(Reader reader) {
+    }public List<Loan> getLoansByBook(Book book) {
+        EntityManager em = emf.createEntityManager();
+        List<Loan> loans = em.createQuery("SELECT l FROM Loan l WHERE l.book = :book", Loan.class)
+                .setParameter("book", book)
+                .getResultList();
+        em.close();
+        return loans;
+    }public List<Loan> getLoansByReader(Reader reader) {
         EntityManager em = emf.createEntityManager();
         List<Loan> loans = em.createQuery("SELECT l FROM Loan l WHERE l.reader = :reader", Loan.class)
                 .setParameter("reader", reader)
@@ -70,14 +80,6 @@ public class LoanService {
         return loans;
     }
 
-    public List<Loan> getLoansByBook(Book book) {
-        EntityManager em = emf.createEntityManager();
-        List<Loan> loans = em.createQuery("SELECT l FROM Loan l WHERE l.book = :book", Loan.class)
-                .setParameter("book", book)
-                .getResultList();
-        em.close();
-        return loans;
-    }
 
     public void close() {
         emf.close();
