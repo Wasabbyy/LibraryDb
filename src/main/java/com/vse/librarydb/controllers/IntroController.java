@@ -13,59 +13,41 @@ public class IntroController {
     @FXML
     private VBox root;
 
+    private void loadScene(String fxmlFile) throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource(fxmlFile));
+            Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
+            Stage stage = (Stage) root.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            System.err.println("Failed to load FXML file: " + fxmlFile);
+            throw e;
+        }
+    }
+
     @FXML
     protected void onAddReaderButtonClick() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("add-reader.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        Stage stage = (Stage) root.getScene().getWindow();
-        stage.setScene(scene);
-        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(800);
-        stage.show();
+        loadScene("add-reader.fxml");
     }
 
     @FXML
     protected void onAddBookButtonClick() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("add-book-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        Stage stage = (Stage) root.getScene().getWindow();
-        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(800);
-        stage.setScene(scene);
-        stage.show();
+        loadScene("add-book-view.fxml");
     }
 
     @FXML
     protected void onAddLoanButtonClick() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("add-loan-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-
-        Stage stage = (Stage) root.getScene().getWindow();
-        stage.setScene(scene);
-        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(800);
-        stage.show();
+        loadScene("add-loan-view.fxml");
     }
 
     @FXML
     protected void onViewDataButtonClick() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("view-data.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        Stage stage = (Stage) root.getScene().getWindow();
-        stage.setScene(scene);
-        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(800);
-        stage.show();
+        loadScene("view-data.fxml");
     }
 
     @FXML
     protected void onReturnBooksButtonClick() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("return-books-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        Stage stage = (Stage) root.getScene().getWindow();
-        stage.setScene(scene);
-        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(800);
-        stage.show();
+        loadScene("return-books-view.fxml");
     }
 }
