@@ -34,9 +34,12 @@
         </HBox>
     </top>
 
-    <!-- Center section with main buttons -->
+    <!-- Center section with main buttons - Return Books now first -->
     <center>
         <VBox fx:id="root" alignment="CENTER" spacing="20" style="-fx-padding: 30;">
+            <Button text="Return Books" onAction="#onReturnBooksButtonClick"
+                    style="-fx-background-color: rgba(76,175,80,0.8); -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40;"/>
+
             <Button text="Add Reader" onAction="#onAddReaderButtonClick"
                     style="-fx-background-color: rgba(66,66,66,0.8); -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40;"/>
 
@@ -45,9 +48,10 @@
 
             <Button text="Add Loan" onAction="#onAddLoanButtonClick"
                     style="-fx-background-color: rgba(66,66,66,0.8); -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40;"/>
-
-            <Button text="Return Books" onAction="#onReturnBooksButtonClick"
-                    style="-fx-background-color: rgba(76,175,80,0.8); -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40;"/>
+            <Button text="Exit" onAction="#onExitButtonClick"
+                    style="-fx-background-color: rgba(244,67,54,0.8); -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40;"/>
         </VBox>
     </center>
+
+
 </BorderPane>

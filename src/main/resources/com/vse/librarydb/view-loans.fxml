@@ -5,30 +5,27 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.vse.librarydb.controllers.ViewLoansController"
-            stylesheets="@styles.css"
-            style="-fx-background-color: #2b2b2b;"
-            prefWidth="1000" prefHeight="800">
+<Pane xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.vse.librarydb.controllers.ViewLoansController"
+      stylesheets="@styles.css"
+      style="-fx-background-color: #2b2b2b;"
+      prefWidth="1000" prefHeight="800">
 
-    <!-- Top panel with title and back button -->
-    <top>
-        <HBox style="-fx-background-color: #424242; -fx-padding: 15;">
-            <Button fx:id="backButton" text="Back" onAction="#onReturnToMenuButtonClick"
-                    styleClass="back-button"/>
-            <Region HBox.hgrow="ALWAYS"/>
-            <Label text="Loan List" style="-fx-text-fill: #e0e0e0; -fx-font-size: 24px; -fx-font-weight: bold;">
-                <effect>
-                    <DropShadow color="#4a4b4a" radius="5" spread="0.2"/>
-                </effect>
-            </Label>
-            <Region HBox.hgrow="ALWAYS"/>
-        </HBox>
-    </top>
+    <!-- Back button -->
+    <Button fx:id="backButton" text="Back" onAction="#onReturnToMenuButtonClick"
+            layoutX="20" layoutY="20"
+            styleClass="back-button"/>
 
-    <!-- Center content -->
-    <center>
-        <ListView fx:id="loansListView" styleClass="dark-list-view"
-                  style="-fx-pref-width: 800; -fx-pref-height: 500;"/>
-    </center>
-</BorderPane>
+    <!-- Title at fixed 450px position -->
+    <Label text="Loan List" layoutX="450" layoutY="30"
+           style="-fx-text-fill: #e0e0e0; -fx-font-size: 24px; -fx-font-weight: bold;">
+        <effect>
+            <DropShadow color="#4a4b4a" radius="5" spread="0.2"/>
+        </effect>
+    </Label>
+
+    <!-- ListView -->
+    <ListView fx:id="loansListView" styleClass="dark-list-view"
+              layoutX="100" layoutY="100"
+              style="-fx-pref-width: 800; -fx-pref-height: 500;"/>
+</Pane>

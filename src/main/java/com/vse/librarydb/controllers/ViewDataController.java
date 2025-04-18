@@ -12,7 +12,13 @@ import java.io.IOException;
 public class ViewDataController extends BaseController {
 
     @FXML
-    private Button backButton; // A button in the FXML file to retrieve the stage
+    private Button backButton;
+    @FXML
+    private Button viewReadersButton;
+    @FXML
+    private Button viewBooksButton;
+    @FXML
+    private Button viewLoansButton;
 
     @FXML
     protected void onViewReadersButtonClick() throws IOException {
@@ -38,11 +44,9 @@ public class ViewDataController extends BaseController {
     }
 
     private void navigateTo(String fxmlFile) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource(fxmlFile));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) backButton.getScene().getWindow();
-        stage.setWidth(1000);
-        stage.setHeight(800);
+        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource(fxmlFile));
+        Scene scene = new Scene(fxmlLoader.load(), stage.getWidth(), stage.getHeight());
         stage.setScene(scene);
         stage.show();
     }

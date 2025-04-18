@@ -10,6 +10,7 @@ module com.vse.librarydb {
 
     // Logging
     requires org.apache.logging.log4j;
+    requires java.desktop;
 
     // Open packages for Hibernate and Validator
     opens com.vse.librarydb to javafx.fxml, org.hibernate.orm.core;
