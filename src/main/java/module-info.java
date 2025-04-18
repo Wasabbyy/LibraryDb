@@ -5,17 +5,23 @@ module com.vse.librarydb {
     // JPA and Hibernate
     requires jakarta.persistence;
     requires org.hibernate.orm.core;
+    requires jakarta.validation;
+    requires org.hibernate.validator;
 
-    // H2 database (if you want another, adjust it)
+    // Logging
     requires org.apache.logging.log4j;
 
-    // Open packages for Hibernate (JPA needs access to entities)
+    // Open packages for Hibernate and Validator
     opens com.vse.librarydb to javafx.fxml, org.hibernate.orm.core;
-    opens com.vse.librarydb.model to org.hibernate.orm.core; // If you store entities in a separate package
+    opens com.vse.librarydb.model to
+            org.hibernate.orm.core,
+            org.hibernate.validator,
+            javafx.base;  // Add this if you're using JavaFX bindings with your model
 
+    // Export packages
     exports com.vse.librarydb;
     exports com.vse.librarydb.model;
     exports com.vse.librarydb.service;
     exports com.vse.librarydb.controllers;
-    opens com.vse.librarydb.controllers to javafx.fxml, org.hibernate.orm.core;
+    opens com.vse.librarydb.controllers to javafx.fxml;
 }

@@ -1,6 +1,7 @@
 package com.vse.librarydb.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 @Entity
 @Table(name = "books")
@@ -8,9 +9,17 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank(message = "Title cannot be blank")
+    @Size(max = 100, message = "Title must not exceed 100 characters")
     private String title;
+
+    @NotBlank(message = "Author cannot be blank")
+    @Size(max = 50, message = "Author name must not exceed 50 characters")
     private String author;
 
+    @Min(value = 1000, message = "Publication year must be a valid year")
+    @Max(value = 9999, message = "Publication year must be a valid year")
     @Column(name = "publication_year", nullable = false)
     private int publicationYear;
 

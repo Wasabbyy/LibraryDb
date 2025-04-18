@@ -6,11 +6,27 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.vse.librarydb.controllers.AddReaderController">
-    <Label fx:id="welcomeText" text="Welcome to the Library App!" />
-    <TextField fx:id="firstNameField" promptText="First Name" />
-    <TextField fx:id="lastNameField" promptText="Last Name" />
-    <TextField fx:id="emailField" promptText="Email" />
-    <Button text="Add Reader" onAction="#onAddReaderButtonClick" />
-    <Button text="Main Menu" onAction="#onReturnToMenuButtonClick" />
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.vse.librarydb.controllers.AddReaderController"
+      style="-fx-padding: 20; -fx-background-color: #f5f5f5;">
+
+    <Label text="Add New Reader" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+
+    <Label text="First Name:" />
+    <TextField fx:id="firstNameField" promptText="Enter first name"
+               style="-fx-pref-width: 300; -fx-padding: 5;" />
+
+    <Label text="Last Name:" />
+    <TextField fx:id="lastNameField" promptText="Enter last name"
+               style="-fx-pref-width: 300; -fx-padding: 5;" />
+
+    <Label text="Email:" />
+    <TextField fx:id="emailField" promptText="Enter email"
+               style="-fx-pref-width: 300; -fx-padding: 5;" />
+
+    <Button text="Add Reader" onAction="#onAddReaderButtonClick"
+            style="-fx-pref-width: 300; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 8;" />
+
+    <Button text="Main Menu" onAction="#onReturnToMenuButtonClick"
+            style="-fx-pref-width: 300; -fx-background-color: #f44336; -fx-text-fill: white; -fx-padding: 8;" />
 </VBox>

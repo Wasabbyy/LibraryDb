@@ -1,6 +1,7 @@
 package com.vse.librarydb.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import java.util.List;
 
 @Entity
@@ -9,15 +10,23 @@ public class Reader {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank(message = "First name cannot be blank")
+    @Size(max = 50, message = "First name must not exceed 50 characters")
     private String firstName;
+
+    @NotBlank(message = "Last name cannot be blank")
+    @Size(max = 50, message = "Last name must not exceed 50 characters")
     private String lastName;
+
+    @NotBlank(message = "Email cannot be blank")
+    @Email(message = "Email must be in a valid format")
     private String email;
 
     @OneToMany(mappedBy = "reader", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Loan> loans;
 
-    public Reader() {
-    }
+    public Reader() {}
 
     public Reader(String firstName, String lastName, String email) {
         this.firstName = firstName;

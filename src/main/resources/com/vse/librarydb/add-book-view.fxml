@@ -2,14 +2,31 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="com.vse.librarydb.controllers.AddBookController">
-    <TextField fx:id="titleField" promptText="Title"/>
-    <TextField fx:id="authorField" promptText="Author"/>
-    <TextField fx:id="publicationYearField" promptText="Publication Year"/>
-    <Button text="Add Book" onAction="#onAddBookButtonClick" />
-    <Button text="Main Menu" onAction="#onReturnToMenuButtonClick" />
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.vse.librarydb.controllers.AddBookController"
+      style="-fx-padding: 20; -fx-background-color: #f5f5f5;">
 
+    <Label text="Add New Book" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+
+    <Label text="Title:" />
+    <TextField fx:id="titleField" promptText="Enter book title"
+               style="-fx-pref-width: 300; -fx-padding: 5;" />
+
+    <Label text="Author:" />
+    <TextField fx:id="authorField" promptText="Enter author name"
+               style="-fx-pref-width: 300; -fx-padding: 5;" />
+
+    <Label text="Publication Year:" />
+    <TextField fx:id="publicationYearField" promptText="Enter publication year"
+               style="-fx-pref-width: 300; -fx-padding: 5;" />
+
+    <Button text="Add Book" onAction="#onAddBookButtonClick"
+            style="-fx-pref-width: 300; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 8;" />
+
+    <Button text="Main Menu" onAction="#onReturnToMenuButtonClick"
+            style="-fx-pref-width: 300; -fx-background-color: #f44336; -fx-text-fill: white; -fx-padding: 8;" />
 </VBox>
