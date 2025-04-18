@@ -55,6 +55,8 @@ public class ViewBooksController extends BaseController {
         BookDetailsController controller = fxmlLoader.getController();
         controller.setBook(book); // Pass the selected book to the new controller
         Stage stage = new Stage();
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800);
         stage.setScene(scene);
         stage.setTitle("Book Details");
         stage.show();
@@ -66,6 +68,8 @@ public class ViewBooksController extends BaseController {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.setScene(scene);
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800);
         stage.show();
     }
 }

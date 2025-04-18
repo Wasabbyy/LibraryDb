@@ -5,28 +5,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
 
-<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+<VBox alignment="CENTER" spacing="15.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.vse.librarydb.controllers.AddBookController"
-      style="-fx-padding: 20; -fx-background-color: #f5f5f5;">
+      style="-fx-background-color: #2b2b2b; -fx-padding: 30;" prefWidth="1000" prefHeight="800">
 
-    <Label text="Add New Book" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+    <Label text="Add New Book" style="-fx-text-fill: #e0e0e0; -fx-font-size: 24px; -fx-font-weight: bold;">
+        <effect>
+            <DropShadow color="#4a4a4a" radius="5" spread="0.2"/>
+        </effect>
+    </Label>
 
-    <Label text="Title:" />
+    <Label text="Title:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
     <TextField fx:id="titleField" promptText="Enter book title"
-               style="-fx-pref-width: 300; -fx-padding: 5;" />
+               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
 
-    <Label text="Author:" />
+    <Label text="Author:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
     <TextField fx:id="authorField" promptText="Enter author name"
-               style="-fx-pref-width: 300; -fx-padding: 5;" />
+               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
 
-    <Label text="Publication Year:" />
+    <Label text="Publication Year:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
     <TextField fx:id="publicationYearField" promptText="Enter publication year"
-               style="-fx-pref-width: 300; -fx-padding: 5;" />
+               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
 
     <Button text="Add Book" onAction="#onAddBookButtonClick"
-            style="-fx-pref-width: 300; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 8;" />
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
 
     <Button text="Main Menu" onAction="#onReturnToMenuButtonClick"
-            style="-fx-pref-width: 300; -fx-background-color: #f44336; -fx-text-fill: white; -fx-padding: 8;" />
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
 </VBox>

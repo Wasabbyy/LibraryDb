@@ -19,6 +19,8 @@ public class IntroController {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) root.getScene().getWindow();
         stage.setScene(scene);
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800);
         stage.show();
     }
 
@@ -27,6 +29,8 @@ public class IntroController {
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("add-book-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) root.getScene().getWindow();
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800);
         stage.setScene(scene);
         stage.show();
     }
@@ -35,8 +39,11 @@ public class IntroController {
     protected void onAddLoanButtonClick() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("add-loan-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+
         Stage stage = (Stage) root.getScene().getWindow();
         stage.setScene(scene);
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800);
         stage.show();
     }
 
@@ -46,6 +53,8 @@ public class IntroController {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) root.getScene().getWindow();
         stage.setScene(scene);
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800);
         stage.show();
     }
 
@@ -55,6 +64,8 @@ public class IntroController {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) root.getScene().getWindow();
         stage.setScene(scene);
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800);
         stage.show();
     }
 }

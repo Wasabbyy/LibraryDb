@@ -5,32 +5,38 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
 
-<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+<VBox alignment="CENTER" spacing="15.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.vse.librarydb.controllers.AddLoanController"
-      style="-fx-padding: 20; -fx-background-color: #f5f5f5;">
+      style="-fx-background-color: #2b2b2b; -fx-padding: 30;" prefWidth="1000" prefHeight="800">
 
-    <Label text="Create New Loan" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+    <Label text="Create New Loan" style="-fx-text-fill: #e0e0e0; -fx-font-size: 24px; -fx-font-weight: bold;">
+        <effect>
+            <DropShadow color="#4a4a4a" radius="5" spread="0.2"/>
+        </effect>
+    </Label>
 
-    <Label text="Reader ID:" />
+    <Label text="Reader ID:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
     <TextField fx:id="readerIdField" promptText="Enter reader ID"
-               style="-fx-pref-width: 300; -fx-padding: 5;" />
+               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
 
-    <Label text="Book ID:" />
+    <Label text="Book ID:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
     <TextField fx:id="bookIdField" promptText="Enter book ID"
-               style="-fx-pref-width: 300; -fx-padding: 5;" />
+               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
 
-    <Label text="Loan Date:" />
+    <Label text="Loan Date:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
     <TextField fx:id="loanDateField" promptText="YYYY-MM-DD"
-               style="-fx-pref-width: 300; -fx-padding: 5;" />
+               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
 
-    <Label text="Rent Period (Days):" />
+    <Label text="Rent Period (Days):" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
     <TextField fx:id="rentPeriodField" promptText="Enter number of days"
-               style="-fx-pref-width: 300; -fx-padding: 5;" />
+               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
 
     <Button text="Create Loan" onAction="#onAddLoanButtonClick"
-            style="-fx-pref-width: 300; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 8;" />
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
 
     <Button text="Main Menu" onAction="#onReturnToMenuButtonClick"
-            style="-fx-pref-width: 300; -fx-background-color: #f44336; -fx-text-fill: white; -fx-padding: 8;" />
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
 </VBox>

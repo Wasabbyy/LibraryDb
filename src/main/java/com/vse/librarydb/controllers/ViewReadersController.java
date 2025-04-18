@@ -32,7 +32,9 @@ public class ViewReadersController extends BaseController {
     protected void onReturnToMenuButtonClick() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("/com/vse/librarydb/view-data.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        Stage stage = (Stage) backButton.getScene().getWindow(); // Use backButton to get the stage
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800); // Use backButton to get the stage
         stage.setScene(scene);
         stage.show();
     }
@@ -65,6 +67,8 @@ public class ViewReadersController extends BaseController {
         controller.setReader(reader); // Pass the selected reader to the new controller
         Stage stage = new Stage();
         stage.setScene(scene);
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800);
         stage.setTitle("Reader Details");
         stage.show();
     }

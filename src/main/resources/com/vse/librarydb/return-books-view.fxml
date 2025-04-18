@@ -3,9 +3,27 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
 
-<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.vse.librarydb.controllers.ReturnBooksController">
-    <ListView fx:id="loanedBooksListView" prefHeight="200.0" prefWidth="300.0" />
-    <Button text="Return Selected Book" onAction="#onReturnButtonClick" />
-    <Button fx:id="returnButton" text="Back to Menu" onAction="#onReturnToMenuButtonClick" />
+<?import javafx.scene.control.Label?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.vse.librarydb.controllers.ReturnBooksController"
+      style="-fx-background-color: #2b2b2b; -fx-padding: 30;" prefWidth="1000" prefHeight="800">
+
+    <Label text="Return Books" style="-fx-text-fill: #e0e0e0; -fx-font-size: 24px; -fx-font-weight: bold;">
+        <effect>
+            <DropShadow color="#4a4a4a" radius="5" spread="0.2"/>
+        </effect>
+    </Label>
+
+    <ListView fx:id="loanedBooksListView"
+              style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 800; -fx-pref-height: 500;">
+    </ListView>
+
+    <Button text="Return Selected Book" onAction="#onReturnButtonClick"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
+
+    <Button fx:id="returnButton" text="Back to Menu" onAction="#onReturnToMenuButtonClick"
+            style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
 </VBox>

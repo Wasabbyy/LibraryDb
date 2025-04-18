@@ -2,11 +2,32 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
 
-<VBox fx:id="root" alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.vse.librarydb.controllers.IntroController">
-    <Button text="Add Reader" onAction="#onAddReaderButtonClick" />
-    <Button text="Add Book" onAction="#onAddBookButtonClick" />
-    <Button text="Add Loan" onAction="#onAddLoanButtonClick" />
-    <Button text="View Data" onAction="#onViewDataButtonClick" />
-    <Button text="Return Books" onAction="#onReturnBooksButtonClick" />
+<?import javafx.scene.control.Label?>
+<VBox fx:id="root" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.vse.librarydb.controllers.IntroController"
+      style="-fx-background-color: #2b2b2b; -fx-padding: 30;">
+
+    <Label text="Library Management System" style="-fx-text-fill: #e0e0e0; -fx-font-size: 24px; -fx-font-weight: bold;">
+        <effect>
+            <DropShadow color="#4a4a4a" radius="5" spread="0.2"/>
+        </effect>
+    </Label>
+
+    <Button text="Add Reader" onAction="#onAddReaderButtonClick"
+            style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40;"/>
+
+    <Button text="Add Book" onAction="#onAddBookButtonClick"
+            style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40;"/>
+
+    <Button text="Add Loan" onAction="#onAddLoanButtonClick"
+            style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40;"/>
+
+    <Button text="View Data" onAction="#onViewDataButtonClick"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40;"/>
+
+    <Button text="Return Books" onAction="#onReturnBooksButtonClick"
+            style="-fx-background-color: #4CAF50;; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40;"/>
 </VBox>

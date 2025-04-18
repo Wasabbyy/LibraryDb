@@ -31,14 +31,18 @@ public class ViewDataController extends BaseController {
 
     @FXML
     protected void onReturnToMenuButtonClick() throws IOException {
-        Stage stage = (Stage) backButton.getScene().getWindow(); // Use the backButton to get the stage
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800); // Use the backButton to get the stage
         super.onReturnToMenuButtonClick(stage);
     }
 
     private void navigateTo(String fxmlFile) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource(fxmlFile));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        Stage stage = (Stage) backButton.getScene().getWindow(); // Use the backButton to get the stage
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800); // Use the backButton to get the stage
         stage.setScene(scene);
         stage.show();
     }

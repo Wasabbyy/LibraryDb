@@ -44,6 +44,8 @@ public class ViewLoansController extends BaseController {
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("/com/vse/librarydb/view-data.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800);
         stage.setScene(scene);
         stage.show();
     }

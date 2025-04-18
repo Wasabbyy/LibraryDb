@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.vse.librarydb.controllers.BookDetailsController" spacing="10" alignment="CENTER" prefWidth="900" prefHeight="800">
-    <Label text="Book Details" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
-    <Label fx:id="bookTitleLabel" text="Title: " />
-    <Label fx:id="bookAuthorLabel" text="Author: " />
-    <Label fx:id="bookYearLabel" text="Year: " />
-    <Label text="Loans:" />
-    <ListView fx:id="loansListView" VBox.vgrow="ALWAYS"   />
-    <Button text="Edit" onAction="#onEdit" />
-    <TextField fx:id="titleTextField" promptText="Edit Title" visible="false"  />
-    <TextField fx:id="authorTextField" promptText="Edit Author" visible="false"/>
-    <TextField fx:id="yearTextField" promptText="Edit Year" visible="false"  />
-    <Button fx:id="saveButton" text="Save" onAction="#onSave" visible="false" />
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.vse.librarydb.controllers.BookDetailsController"
+      spacing="20" alignment="CENTER" style="-fx-background-color: #2b2b2b; -fx-padding: 30;" prefWidth="1500" prefHeight="1000">
+
+    <Label text="Book Details" style="-fx-text-fill: #e0e0e0; -fx-font-size: 24px; -fx-font-weight: bold;">
+        <effect>
+            <DropShadow color="#4a4a4a" radius="5" spread="0.2"/>
+        </effect>
+    </Label>
+
+    <Label fx:id="bookTitleLabel" text="Title: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
+    <Label fx:id="bookAuthorLabel" text="Author: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
+    <Label fx:id="bookYearLabel" text="Year: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
+
+    <Label text="Loans:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <ListView fx:id="loansListView" style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 800; -fx-pref-height: 300;">
+    </ListView>
+
+    <Button text="Edit" onAction="#onEdit"
+            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="titleTextField" promptText="Edit Title" visible="false"
+               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
+
+    <TextField fx:id="authorTextField" promptText="Edit Author" visible="false"
+               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
+
+    <TextField fx:id="yearTextField" promptText="Edit Year" visible="false"
+               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
+
+    <Button fx:id="saveButton" text="Save" onAction="#onSave" visible="false"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
 </VBox>

@@ -11,6 +11,8 @@ public class LibraryApp extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("intro-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Library App");
+        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
+        stage.setHeight(800);
         stage.setScene(scene);
         stage.show();
     }
