@@ -23,39 +23,78 @@ public class ReaderService {
         this.validator = factory.getValidator();
     }
 
+    // Add this new validation method
+    public String validateReader(String firstName, String lastName, String email) {
+        Reader reader = new Reader(firstName, lastName, email);
+        Set<ConstraintViolation<Reader>> violations = validator.validate(reader);
+
+        if (!violations.isEmpty()) {
+            StringBuilder errorMessage = new StringBuilder("Validation errors:\n");
+            for (ConstraintViolation<Reader> violation : violations) {
+                errorMessage.append(violation.getPropertyPath())
+                        .append(": ")
+                        .append(violation.getMessage())
+                        .append("\n");
+            }
+            return errorMessage.toString();
+        }
+        return "Validation successful";
+    }
+
     public String addReader(String firstName, String lastName, String email) {
         EntityManager em = emf.createEntityManager();
         try {
-            // Create a Reader object
             Reader reader = new Reader(firstName, lastName, email);
 
             // Validate the Reader object
-            Set<ConstraintViolation<Reader>> violations = validator.validate(reader);
-            if (!violations.isEmpty()) {
-                // Collect error messages
-                StringBuilder errorMessage = new StringBuilder("Validation errors:\n");
-                for (ConstraintViolation<Reader> violation : violations) {
-                    errorMessage.append(violation.getPropertyPath())
-                            .append(": ")
-                            .append(violation.getMessage())
-                            .append("\n");
-                }
-                return errorMessage.toString(); // Return errors to the caller
+            String validationResult = validateReader(firstName, lastName, email);
+            if (!validationResult.equals("Validation successful")) {
+                return validationResult;
             }
 
-            // Persist the Reader if valid
             em.getTransaction().begin();
             em.persist(reader);
             em.getTransaction().commit();
             return "Reader added successfully!";
         } catch (Exception e) {
             e.printStackTrace();
-            return "An error occurred while adding the reader.";
+            return "An error occurred while adding the reader: " + e.getMessage();
         } finally {
             em.close();
         }
     }
 
+    // Update this method to return String
+    public String updateReader(Reader reader) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            // Validate before updating
+            String validationResult = validateReader(reader.getFirstName(), reader.getLastName(), reader.getEmail());
+            if (!validationResult.equals("Validation successful")) {
+                return validationResult;
+            }
+
+            em.getTransaction().begin();
+            Reader existingReader = em.find(Reader.class, reader.getId());
+            if (existingReader != null) {
+                existingReader.setFirstName(reader.getFirstName());
+                existingReader.setLastName(reader.getLastName());
+                existingReader.setEmail(reader.getEmail());
+                em.getTransaction().commit();
+                return "Reader updated successfully!";
+            } else {
+                return "Reader not found!";
+            }
+        } catch (Exception e) {
+            if (em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            e.printStackTrace();
+            return "An error occurred while updating the reader: " + e.getMessage();
+        } finally {
+            em.close();
+        }
+    }
     public List<Reader> getAllReaders() {
         EntityManager em = emf.createEntityManager();
         try {
@@ -63,24 +102,6 @@ public class ReaderService {
         } catch (Exception e) {
             e.printStackTrace();
             return null;
-        } finally {
-            em.close();
-        }
-    }
-
-    public void updateReader(Reader reader) {
-        EntityManager em = emf.createEntityManager();
-        try {
-            em.getTransaction().begin();
-            Reader existingReader = em.find(Reader.class, reader.getId());
-            if (existingReader != null) {
-                existingReader.setFirstName(reader.getFirstName());
-                existingReader.setLastName(reader.getLastName());
-                existingReader.setEmail(reader.getEmail());
-            }
-            em.getTransaction().commit();
-        } catch (Exception e) {
-            e.printStackTrace();
         } finally {
             em.close();
         }

@@ -1,0 +1,151 @@
+/* Main dark theme styles */
+.dark-list-view {
+    -fx-control-inner-background: #424242;
+    -fx-background-color: #424242;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+}
+
+/* List cell styling */
+.dark-list-view .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #424242;
+    -fx-padding: 8px;
+}
+
+/* Hover effect */
+.dark-list-view .list-cell:hover {
+    -fx-background-color: #505050;
+    -fx-cursor: hand;
+}
+
+/* Selected item */
+.dark-list-view .list-cell:filled:selected {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+/* Focused cell */
+.dark-list-view .list-cell:filled:focused {
+    -fx-background-color: #1976D2;
+}
+
+/* Back button styling */
+.back-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.back-button:hover {
+    -fx-background-color: #1976D2;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+/* Additional styles for Book Details view */
+.dark-text-field {
+    -fx-background-color: #424242;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 400;
+    -fx-pref-height: 40;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+}
+
+.action-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.action-button:hover {
+    -fx-background-color: #1976D2;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+
+.save-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.save-button:hover {
+    -fx-background-color: #3e8e41;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+/* Detail View Styles */
+.detail-label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 16px;
+    -fx-padding: 5px;
+}
+
+.section-header {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0 5px 0;
+}
+
+.dark-text-field {
+    -fx-background-color: #424242;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 400;
+    -fx-pref-height: 40;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-padding: 5px;
+}
+
+.action-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.action-button:hover {
+    -fx-background-color: #1976D2;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+
+.save-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.save-button:hover {
+    -fx-background-color: #3e8e41;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}

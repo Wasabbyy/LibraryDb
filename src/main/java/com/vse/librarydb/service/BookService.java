@@ -23,31 +23,38 @@ public class BookService {
         this.validator = factory.getValidator();
     }
 
+    // Add validation method
+    public String validateBook(String title, String author, int publicationYear) {
+        Book book = new Book(title, author, publicationYear, true);
+        Set<ConstraintViolation<Book>> violations = validator.validate(book);
+
+        if (!violations.isEmpty()) {
+            StringBuilder errorMessage = new StringBuilder("Validation errors:\n");
+            for (ConstraintViolation<Book> violation : violations) {
+                errorMessage.append(violation.getPropertyPath())
+                        .append(": ")
+                        .append(violation.getMessage())
+                        .append("\n");
+            }
+            return errorMessage.toString();
+        }
+        return "Validation successful";
+    }
 
     public String addBook(String title, String author, int publicationYear, boolean available) {
         EntityManager em = emf.createEntityManager();
         try {
-            // Create a new Book
             Book book = new Book(title, author, publicationYear, available);
 
-            // Validate the Book
-            Set<ConstraintViolation<Book>> violations = validator.validate(book);
-            if (!violations.isEmpty()) {
-                StringBuilder errorMessage = new StringBuilder("Validation errors:\n");
-                for (ConstraintViolation<Book> violation : violations) {
-                    errorMessage.append(violation.getPropertyPath())
-                            .append(": ")
-                            .append(violation.getMessage())
-                            .append("\n");
-                }
-                return errorMessage.toString();
+            // Validate before adding
+            String validationResult = validateBook(title, author, publicationYear);
+            if (!validationResult.equals("Validation successful")) {
+                return validationResult;
             }
 
-            // Persist the book
             em.getTransaction().begin();
             em.persist(book);
             em.getTransaction().commit();
-
             return "Book added successfully!";
         } catch (Exception e) {
             e.printStackTrace();
@@ -57,17 +64,47 @@ public class BookService {
         }
     }
 
-    public List<Book> getAllBooks() {
+    // Update to return String
+    public String updateBook(Book book) {
         EntityManager em = emf.createEntityManager();
-        List<Book> books = em.createQuery("SELECT b FROM Book b", Book.class).getResultList();
-        em.close();
-        return books;
+        try {
+            // Validate before updating
+            String validationResult = validateBook(book.getTitle(), book.getAuthor(), book.getPublicationYear());
+            if (!validationResult.equals("Validation successful")) {
+                return validationResult;
+            }
+
+            em.getTransaction().begin();
+            Book existingBook = em.find(Book.class, book.getId());
+            if (existingBook != null) {
+                existingBook.setTitle(book.getTitle());
+                existingBook.setAuthor(book.getAuthor());
+                existingBook.setPublicationYear(book.getPublicationYear());
+                em.getTransaction().commit();
+                return "Book updated successfully!";
+            } else {
+                return "Book not found!";
+            }
+        } catch (Exception e) {
+            if (em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            e.printStackTrace();
+            return "An error occurred while updating the book: " + e.getMessage();
+        } finally {
+            em.close();
+        }
     }
 
-    public void close() {
-        emf.close();
+    public List<Book> getAllBooks() {
+        EntityManager em = emf.createEntityManager();
+        try {
+            return em.createQuery("SELECT b FROM Book b", Book.class).getResultList();
+        } finally {
+            em.close();
+        }
     }
-    // BookService.java
+
     public Book getBookById(Long id) {
         EntityManager em = emf.createEntityManager();
         try {
@@ -76,22 +113,10 @@ public class BookService {
             em.close();
         }
     }
-    public void updateBook(Book book) {
-        EntityManager em = emf.createEntityManager();
-        try {
-            em.getTransaction().begin();
-            // Fetch the existing book from the database
-            Book existingBook = em.find(Book.class, book.getId());
-            if (existingBook != null) {
-                // Update only the fields that are being changed
-                existingBook.setTitle(book.getTitle());
-                existingBook.setAuthor(book.getAuthor());
-                existingBook.setPublicationYear(book.getPublicationYear());
-                // The loans relationship remains intact as the book's ID is unchanged
-            }
-            em.getTransaction().commit();
-        } finally {
-            em.close();
+
+    public void close() {
+        if (emf != null && emf.isOpen()) {
+            emf.close();
         }
     }
 }

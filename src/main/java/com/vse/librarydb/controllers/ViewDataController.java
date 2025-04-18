@@ -32,8 +32,8 @@ public class ViewDataController extends BaseController {
     @FXML
     protected void onReturnToMenuButtonClick() throws IOException {
         Stage stage = (Stage) backButton.getScene().getWindow();
-        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(800); // Use the backButton to get the stage
+        stage.setWidth(1000);
+        stage.setHeight(800);
         super.onReturnToMenuButtonClick(stage);
     }
 
@@ -41,8 +41,8 @@ public class ViewDataController extends BaseController {
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource(fxmlFile));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) backButton.getScene().getWindow();
-        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(800); // Use the backButton to get the stage
+        stage.setWidth(1000);
+        stage.setHeight(800);
         stage.setScene(scene);
         stage.show();
     }

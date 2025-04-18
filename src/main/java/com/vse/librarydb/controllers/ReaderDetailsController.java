@@ -6,26 +6,22 @@ import javafx.scene.control.*;
 import com.vse.librarydb.model.Reader;
 import com.vse.librarydb.service.LoanService;
 import com.vse.librarydb.service.ReaderService;
+import javafx.scene.control.Alert.AlertType;
 
 import java.util.List;
 
-public class ReaderDetailsController {
+public class ReaderDetailsController extends BaseController {
 
     @FXML
     private Label readerNameLabel;
-
     @FXML
     private Label readerEmailLabel;
-
     @FXML
     private ListView<String> loansListView;
-
     @FXML
     private TextField nameTextField;
-
     @FXML
     private TextField emailTextField;
-
     @FXML
     private Button saveButton;
 
@@ -51,12 +47,12 @@ public class ReaderDetailsController {
         }
     }
 
-
     @FXML
     private void onEdit() {
-        if (saveButton == null) {
-            System.out.println("saveButton is null");
-        }
+        // Set current values in the text fields when editing starts
+        nameTextField.setText(currentReader.getName());
+        emailTextField.setText(currentReader.getEmail());
+
         nameTextField.setVisible(true);
         emailTextField.setVisible(true);
         saveButton.setVisible(true);
@@ -64,22 +60,47 @@ public class ReaderDetailsController {
 
     @FXML
     private void onSave() {
-        // Update reader details
-        String[] nameParts = nameTextField.getText().split(" ", 2);
-        if (nameParts.length == 2) {
-            currentReader.setFirstName(nameParts[0]);
-            currentReader.setLastName(nameParts[1]);
+        String fullName = nameTextField.getText().trim();
+        String email = emailTextField.getText().trim();
+
+        // Split the name into first and last name
+        String[] nameParts = fullName.split(" ", 2);
+        String firstName = nameParts[0];
+        String lastName = nameParts.length > 1 ? nameParts[1] : "";
+
+        // Validate the inputs
+        String validationResult = readerService.validateReader(firstName, lastName, email);
+
+        if (!validationResult.equals("Validation successful")) {
+            showAlert(AlertType.ERROR, "Validation Error", "Please fix the following issues:", validationResult);
+            return;
         }
-        currentReader.setEmail(emailTextField.getText());
+
+        // Update reader details if validation passed
+        currentReader.setFirstName(firstName);
+        currentReader.setLastName(lastName);
+        currentReader.setEmail(email);
 
         // Save to database
-        readerService.updateReader(currentReader);
+        String saveResult = readerService.updateReader(currentReader);
 
-        // Update labels and hide text fields
-        readerNameLabel.setText(currentReader.getName());
-        readerEmailLabel.setText(currentReader.getEmail());
-        nameTextField.setVisible(false);
-        emailTextField.setVisible(false);
-        saveButton.setVisible(false);
+        if (saveResult.equals("Reader updated successfully!")) {
+            showAlert(AlertType.INFORMATION, "Success", "Reader Updated", saveResult);
+            readerNameLabel.setText(currentReader.getName());
+            readerEmailLabel.setText(currentReader.getEmail());
+            nameTextField.setVisible(false);
+            emailTextField.setVisible(false);
+            saveButton.setVisible(false);
+        } else {
+            showAlert(AlertType.ERROR, "Error", "Failed to update reader", saveResult);
+        }
+    }
+
+    private void showAlert(AlertType type, String title, String header, String content) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
 }
