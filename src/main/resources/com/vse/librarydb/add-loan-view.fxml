@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
@@ -18,23 +19,19 @@
         </effect>
     </Label>
 
-    <Label text="Reader ID:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
-    <TextField fx:id="readerIdField" promptText="Enter reader ID"
+    <Label text="Select Reader:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
+    <ComboBox fx:id="readerComboBox" promptText="Choose a reader"
+              style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400;"/>
+
+    <Label text="Select Book:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
+    <ComboBox fx:id="bookComboBox" promptText="Choose a book"
+              style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400;"/>
+
+    <Label text="Loan Duration (days):" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
+    <TextField fx:id="daysField" promptText="Enter loan duration (e.g., 14)"
                style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
 
-    <Label text="Book ID:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
-    <TextField fx:id="bookIdField" promptText="Enter book ID"
-               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
-
-    <Label text="Loan Date:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
-    <TextField fx:id="loanDateField" promptText="YYYY-MM-DD"
-               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
-
-    <Label text="Rent Period (Days):" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
-    <TextField fx:id="rentPeriodField" promptText="Enter number of days"
-               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
-
-    <Button text="Create Loan" onAction="#onAddLoanButtonClick"
+    <Button text="Create Loan" onAction="#onSaveLoanButtonClick"
             style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
 
     <Button text="Main Menu" onAction="#onReturnToMenuButtonClick"
