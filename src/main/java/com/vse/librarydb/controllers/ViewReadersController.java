@@ -34,7 +34,7 @@ public class ViewReadersController extends BaseController {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(800); // Use backButton to get the stage
+        stage.setHeight(600); // Use backButton to get the stage
         stage.setScene(scene);
         stage.show();
     }
@@ -68,7 +68,7 @@ public class ViewReadersController extends BaseController {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(800);
+        stage.setHeight(600);
         stage.setTitle("Reader Details");
         stage.show();
     }

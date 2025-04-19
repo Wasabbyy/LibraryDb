@@ -27,5 +27,5 @@
     <!-- ListView -->
     <ListView fx:id="loansListView" styleClass="dark-list-view"
               layoutX="100" layoutY="100"
-              style="-fx-pref-width: 800; -fx-pref-height: 500;"/>
+              style="-fx-pref-width: 800; -fx-pref-height: 300;"/>
 </Pane>

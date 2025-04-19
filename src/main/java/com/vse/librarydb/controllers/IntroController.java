@@ -18,7 +18,7 @@ public class IntroController {
     private void loadScene(String fxmlFile) throws IOException {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource(fxmlFile));
-            Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
+            Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
             Stage stage = (Stage) root.getScene().getWindow();
             stage.setScene(scene);
             stage.show();

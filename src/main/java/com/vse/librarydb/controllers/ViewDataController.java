@@ -39,7 +39,7 @@ public class ViewDataController extends BaseController {
     protected void onReturnToMenuButtonClick() throws IOException {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.setWidth(1000);
-        stage.setHeight(800);
+        stage.setHeight(600);
         super.onReturnToMenuButtonClick(stage);
     }
 

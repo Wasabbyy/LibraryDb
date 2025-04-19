@@ -23,6 +23,10 @@ public class Book {
     @Column(name = "publication_year", nullable = false)
     private int publicationYear;
 
+    @Size(max = 500, message = "Note must not exceed 500 characters")
+    @Column(length = 500)
+    private String note;
+
     private boolean available;
 
     public Book() {}
@@ -32,6 +36,7 @@ public class Book {
         this.author = author;
         this.publicationYear = publicationYear;
         this.available = available;
+        this.note=null;
     }
 
     // Getters
@@ -70,5 +75,12 @@ public class Book {
 
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 }

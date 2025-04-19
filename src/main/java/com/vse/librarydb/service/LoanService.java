@@ -67,7 +67,7 @@ public class LoanService {
     }
 
 
-    public String returnBook(Long loanId) {
+    public String returnBook(Long loanId, String note) {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
@@ -89,9 +89,14 @@ public class LoanService {
             LocalDate dueDate = loan.getLoanDate().plusDays(loan.getRentPeriodDays());
             loan.setDelayed(LocalDate.now().isAfter(dueDate));
 
-            // Mark the book as available
+            // Mark the book as available and update note
             Book book = loan.getBook();
             book.setAvailable(true);
+
+            // Only update note if one was provided (null or empty string won't overwrite existing note)
+            if (note != null && !note.trim().isEmpty()) {
+                book.setNote(note.trim());
+            }
 
             em.merge(loan);
             em.merge(book);
@@ -108,7 +113,6 @@ public class LoanService {
             em.close();
         }
     }
-
     public List<Loan> getAllLoans() {
         EntityManager em = emf.createEntityManager();
         List<Loan> loans = em.createQuery("SELECT l FROM Loan l", Loan.class).getResultList();

@@ -20,6 +20,7 @@
     <Label fx:id="bookTitleLabel" text="Title: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
     <Label fx:id="bookAuthorLabel" text="Author: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
     <Label fx:id="bookYearLabel" text="Year: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
+    <Label fx:id="bookNoteLabel" text="Year: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
 
     <Label text="Loans:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 18px; -fx-font-weight: bold;"/>
     <ListView fx:id="loansListView" styleClass="dark-list-view"

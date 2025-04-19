@@ -12,7 +12,7 @@ public class LibraryApp extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Library App");
         stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(800);
+        stage.setHeight(600);
         stage.setScene(scene);
         stage.show();
     }

@@ -13259,3 +13259,1114 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field private java
 2025-04-18 22:47:16 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 2025-04-18 22:47:16 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2025-04-18 22:47:16 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4475f068] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:37 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:37 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-18 22:56:37 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:37 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:37 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:37 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:37 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:37 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:37 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:37 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:38 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-18 22:56:38 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:38 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2d940df0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:39 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:39 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@594a058c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:39 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:39 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:39 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4f94742] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:40 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:40 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:40 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:40 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:40 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:40 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:40 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:40 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:40 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:40 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:40 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4b39f309] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:41 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:41 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7dd42e9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:41 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:41 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@50269aa8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:41 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:41 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:41 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@17dcc6e7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:42 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:42 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:42 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:42 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:42 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:42 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:42 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:42 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:42 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:42 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:42 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7b2f5881] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:43 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:43 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79dd2fac] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:43 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:43 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@31a23f05] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:43 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:43 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:43 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1834dab4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:44 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:44 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@efa3cea] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:44 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:44 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@8d10f56] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:44 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:44 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:44 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1221b89b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:54 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:54 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6d84c8e8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:54 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:54 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:54 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@419cf00] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:55 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:55 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4fafb0c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:55 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:55 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@78e7223] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:55 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:55 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:55 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1c843471] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:56 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:56 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5f68b692] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:56 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:56 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@53dbb6e8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 22:56:56 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 22:56:56 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 22:56:56 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@d99728d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:01:29 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:01:29 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:01:29 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c3242c3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:01:32 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:01:32 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:01:32 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:01:32 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:01:32 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:01:32 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:01:32 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:01:32 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:01:32 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:01:32 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:01:32 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2be44ecb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:01:49 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:01:49 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:01:49 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:01:49 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:01:49 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:01:49 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:01:49 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:01:49 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:01:49 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:01:49 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:01:49 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7820ad03] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:01:51 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:01:51 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:01:51 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:01:51 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:01:51 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:01:51 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:01:51 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:01:51 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:01:51 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:01:51 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:01:51 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@13bd680c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:01:53 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:01:53 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:01:53 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:01:53 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:01:53 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:01:53 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:01:53 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:01:53 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:01:53 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:01:53 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:01:53 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3319b474] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:02:02 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:02:02 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:02:02 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:02:02 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:02:02 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:02:02 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:02:02 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:02:02 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:02:02 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:02:02 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:02:02 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1b9669e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:09 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:09 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:09 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:09 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:09 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:09 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:09 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:09 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:09 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:09 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:09 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6b763ecf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:14 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:14 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@436f6dac] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:14 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:14 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6958851a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:14 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:14 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:14 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@55339c9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:17 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:17 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:17 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:17 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:17 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:17 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:17 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:17 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:17 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:17 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:17 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@30e2b795] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:19 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:19 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@8702e36] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:19 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:19 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3fbf022a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:19 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:19 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:19 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4ebd7ed6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:22 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:22 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:22 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:22 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:22 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:22 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:22 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:22 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:22 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:22 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:22 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2c3f3eee] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:24 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:24 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:24 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:24 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:24 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:24 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:24 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:24 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:24 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@a117481] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:25 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:25 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3cfa44c0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:03:25 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:03:25 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:03:25 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7274ea6c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:04:06 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:04:06 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-18 23:04:06 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:04:06 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:04:06 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:04:06 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:04:06 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:04:06 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:04:06 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:04:06 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:04:07 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-18 23:04:07 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:04:07 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@694740d5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:05:43 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:05:43 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:05:43 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@463e94a5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:07:14 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:07:14 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-18 23:07:14 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:07:14 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:07:14 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:07:14 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:07:14 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:07:14 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:07:14 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:07:14 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:07:15 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-18 23:07:15 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:07:15 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2e583f92] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-18 23:07:18 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-18 23:07:18 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-18 23:07:18 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-18 23:07:18 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-18 23:07:18 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-18 23:07:18 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-18 23:07:18 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-18 23:07:18 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-18 23:07:18 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-18 23:07:18 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-18 23:07:18 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@558eeaef] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:50:21 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:50:21 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-19 11:50:21 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:50:22 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:50:22 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:50:22 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:50:22 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:50:22 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:50:22 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:50:22 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:50:22 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-19 11:50:22 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:50:22 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@33fa2a7b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:50:27 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:50:27 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5570ca63] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:50:27 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:50:27 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@cf7d3ee] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:50:27 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:50:27 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:50:27 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@205bfb18] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:51:16 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:51:16 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:51:16 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:51:16 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:51:16 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:51:16 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:51:16 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:51:16 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:51:16 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:51:16 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:51:16 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3541e018] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:52:53 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:52:53 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:52:53 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@29765438] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:55:44 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:55:44 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:55:44 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3ce72381] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:56:08 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:56:08 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:56:08 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:56:08 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:56:08 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:56:08 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:56:08 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:56:08 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:56:08 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:56:08 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:56:08 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3c96f85d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:56:12 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:56:12 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:56:12 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:56:12 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:56:12 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:56:12 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:56:12 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:56:12 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:56:12 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:56:12 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:56:12 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3be0f22b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:56:13 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:56:13 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5c90a347] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 11:56:13 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 11:56:13 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 11:56:13 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6cde2e01] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:02:25 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:02:25 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:02:25 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:02:25 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:02:25 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:02:25 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:02:25 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:02:25 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:02:25 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:02:25 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:02:25 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c3e12a9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:02:28 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:02:28 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:02:28 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:02:28 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:02:28 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:02:28 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:02:28 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:02:28 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:02:28 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:02:28 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:02:28 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5ec873ee] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:02:32 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:02:32 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:02:32 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:02:32 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:02:32 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:02:32 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:02:32 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:02:32 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:02:32 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:02:32 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:02:32 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2e152699] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:02:38 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:02:38 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:02:38 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:02:38 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:02:38 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:02:38 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:02:38 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:02:38 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:02:38 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:02:38 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:02:38 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a7785b0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:02:41 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:02:41 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6f282a59] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:02:41 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:02:41 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2432478c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:02:41 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:02:41 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:02:41 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@346b9fa] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:04:48 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:04:48 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-19 12:04:48 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:04:48 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:04:48 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:04:48 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:04:48 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:04:48 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:04:48 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:04:48 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:04:48 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-19 12:04:49 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:04:49 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4f0bd020] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:04:51 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:04:51 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@39aff461] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:04:51 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:04:51 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:04:51 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5431dd1c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:05:30 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:05:30 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3503db50] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:05:30 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:05:30 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@457f1b17] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:05:30 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:05:30 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:05:30 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2252b1f7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:05:52 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:05:52 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@734cc2ba] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:05:52 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:05:52 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:05:52 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@41e2917a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:05:53 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:05:53 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:05:53 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@26a481bc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:06:08 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:06:08 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:06:08 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:06:08 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:06:08 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:06:08 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:06:08 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:06:08 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:06:08 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:06:08 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:06:08 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@36fc4ddb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:06:34 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:06:34 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:06:34 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:06:34 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:06:34 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:06:34 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:06:34 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:06:34 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:06:34 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:06:34 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:06:34 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59e1fa94] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:06:36 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:06:36 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5ae71793] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:06:36 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:06:36 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:06:36 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3cc5e964] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:06:46 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:06:46 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:06:46 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:06:46 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:06:46 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:06:46 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:06:46 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:06:46 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:06:46 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:06:46 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:06:46 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@767c9163] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:06:47 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:06:47 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59ee21b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:06:47 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:06:47 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:06:47 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a90bccc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:07:01 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:07:01 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:07:01 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:07:01 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:07:01 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:07:01 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:07:01 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:07:01 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:07:01 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:07:01 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:07:01 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@22850450] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:09 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:09 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-19 12:11:09 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:09 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:09 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:09 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:09 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:09 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:09 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:09 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:09 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-19 12:11:09 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7a905740] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:10 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:10 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1279ccff] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:10 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:10 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:10 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@49580fb4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:13 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:13 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2b111a3f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:13 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:13 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@61ac7b61] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:13 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:13 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:13 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@339ffbdc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:26 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:26 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@396947f9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:26 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:26 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@54e3e260] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:26 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:26 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:26 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3a2f57d0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:29 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:29 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:29 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:29 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:29 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:29 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:29 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:29 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:29 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:29 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:29 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@42916e72] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:32 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:32 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5b250857] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:32 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:32 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7b8f5e7f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:32 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:32 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:32 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6c8f0d44] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:39 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:39 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:39 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:39 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:39 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:39 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:39 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:39 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:39 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:39 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:39 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@647cd162] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:52 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:52 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:52 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:52 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:52 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:52 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:52 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:52 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:52 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:52 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:52 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3084ce0d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:55 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:55 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:55 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:55 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:55 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:55 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:55 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:55 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:55 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:55 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:55 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@340ac29f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:11:59 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:11:59 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:11:59 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:11:59 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:11:59 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:11:59 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:11:59 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:11:59 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:11:59 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:11:59 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:11:59 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5ca69adc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:12:00 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:12:00 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1ea83d1d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:12:00 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:12:00 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:12:00 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@45e2425b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-04-19 12:13:40 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-04-19 12:13:40 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-04-19 12:13:40 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-19 12:13:40 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-04-19 12:13:40 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-04-19 12:13:40 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:./data/librarydb]
+2025-04-19 12:13:40 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-04-19 12:13:40 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-04-19 12:13:40 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-04-19 12:13:40 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 12:13:40 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-04-19 12:13:41 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 12:13:41 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@71758c30] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.

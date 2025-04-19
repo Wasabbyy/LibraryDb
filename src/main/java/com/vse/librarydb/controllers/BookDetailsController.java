@@ -19,6 +19,8 @@ public class BookDetailsController extends BaseController {
     @FXML
     private Label bookYearLabel;
     @FXML
+    private Label bookNoteLabel;
+    @FXML
     private ListView<String> loansListView;
     @FXML
     private TextField titleTextField;
@@ -43,6 +45,7 @@ public class BookDetailsController extends BaseController {
         bookTitleLabel.setText(book.getTitle());
         bookAuthorLabel.setText(book.getAuthor());
         bookYearLabel.setText(String.valueOf(book.getPublicationYear()));
+        bookNoteLabel.setText(book.getNote() != null ? book.getNote() : "No note available");
 
         // Clear and repopulate the loans list
         loansListView.getItems().clear();
