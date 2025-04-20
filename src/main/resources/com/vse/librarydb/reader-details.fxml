@@ -17,21 +17,38 @@
         </effect>
     </Label>
 
-    <Label fx:id="readerNameLabel" text="Name: " styleClass="detail-label"/>
-    <Label fx:id="readerEmailLabel" text="Email: " styleClass="detail-label"/>
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER"/>
+            <ColumnConstraints halignment="LEFT" hgrow="NEVER"/>
+        </columnConstraints>
+
+        <!-- View Mode -->
+        <Label text="Full name:" styleClass="detail-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="readerNameLabel" text="" styleClass="detail-label" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Email:" styleClass="detail-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="readerEmailLabel" text="" styleClass="detail-label" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Edit Mode (initially hidden) -->
+        <Label text="Full name:" styleClass="detail-label" visible="false"
+               fx:id="nameEditLabel" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="nameTextField" promptText="Edit name" visible="false"
+                   styleClass="dark-text-field" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Email:" styleClass="detail-label" visible="false"
+               fx:id="emailEditLabel" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="emailTextField" promptText="Edit email" visible="false"
+                   styleClass="dark-text-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    </GridPane>
 
     <Label text="Loans:" styleClass="section-header"/>
     <ListView fx:id="loansListView" styleClass="dark-list-view"
               style="-fx-pref-width: 800; -fx-pref-height: 300;"/>
 
-    <Button text="Edit" onAction="#onEdit" styleClass="action-button"/>
-
-    <TextField fx:id="nameTextField" promptText="Edit Name" visible="false"
-               styleClass="dark-text-field"/>
-
-    <TextField fx:id="emailTextField" promptText="Edit Email" visible="false"
-               styleClass="dark-text-field"/>
-
-    <Button fx:id="saveButton" text="Save" onAction="#onSave" visible="false"
-            styleClass="save-button"/>
+    <VBox spacing="10" alignment="CENTER">
+        <Button text="Edit" onAction="#onEdit" styleClass="action-button"/>
+        <Button fx:id="saveButton" text="Save" onAction="#onSave" visible="false"
+                styleClass="save-button"/>
+    </VBox>
 </VBox>

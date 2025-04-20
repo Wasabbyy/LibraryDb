@@ -12,24 +12,18 @@ import java.util.List;
 
 public class BookDetailsController extends BaseController {
 
-    @FXML
-    private Label bookTitleLabel;
-    @FXML
-    private Label bookAuthorLabel;
-    @FXML
-    private Label bookYearLabel;
-    @FXML
-    private Label bookNoteLabel;
-    @FXML
-    private ListView<String> loansListView;
-    @FXML
-    private TextField titleTextField;
-    @FXML
-    private TextField authorTextField;
-    @FXML
-    private TextField yearTextField;
-    @FXML
-    private Button saveButton;
+    @FXML private Label bookTitleLabel;
+    @FXML private Label bookAuthorLabel;
+    @FXML private Label bookYearLabel;
+    @FXML private Label bookNoteLabel;
+    @FXML private ListView<String> loansListView;
+    @FXML private TextField titleTextField;
+    @FXML private TextField authorTextField;
+    @FXML private TextField yearTextField;
+    @FXML private Button saveButton;
+    @FXML private Label titleEditLabel;
+    @FXML private Label authorEditLabel;
+    @FXML private Label yearEditLabel;
 
     private BookService bookService;
     private LoanService loanService;
@@ -42,12 +36,11 @@ public class BookDetailsController extends BaseController {
 
     public void setBook(Book book) {
         this.currentBook = book;
-        bookTitleLabel.setText(book.getTitle());
-        bookAuthorLabel.setText(book.getAuthor());
-        bookYearLabel.setText(String.valueOf(book.getPublicationYear()));
-        bookNoteLabel.setText(book.getNote() != null ? book.getNote() : "No note available");
+        bookTitleLabel.setText("Title: " + book.getTitle());
+        bookAuthorLabel.setText("Author: " + book.getAuthor());
+        bookYearLabel.setText("Year: " + book.getPublicationYear());
+        bookNoteLabel.setText("Note: " + (book.getNote() != null ? book.getNote() : "No note available"));
 
-        // Clear and repopulate the loans list
         loansListView.getItems().clear();
         List<Loan> loans = loanService.getLoansByBook(book);
         for (Loan loan : loans) {
@@ -61,8 +54,18 @@ public class BookDetailsController extends BaseController {
         titleTextField.setText(currentBook.getTitle());
         authorTextField.setText(currentBook.getAuthor());
         yearTextField.setText(String.valueOf(currentBook.getPublicationYear()));
+
+        // Hide view labels
+        bookTitleLabel.setVisible(false);
+        bookAuthorLabel.setVisible(false);
+        bookYearLabel.setVisible(false);
+
+        // Show edit controls
+        titleEditLabel.setVisible(true);
         titleTextField.setVisible(true);
+        authorEditLabel.setVisible(true);
         authorTextField.setVisible(true);
+        yearEditLabel.setVisible(true);
         yearTextField.setVisible(true);
         saveButton.setVisible(true);
     }
@@ -74,26 +77,31 @@ public class BookDetailsController extends BaseController {
             String author = authorTextField.getText().trim();
             int year = Integer.parseInt(yearTextField.getText().trim());
 
-            // Validate inputs
             String validationResult = bookService.validateBook(title, author, year);
             if (!validationResult.equals("Validation successful")) {
                 showAlert(AlertType.ERROR, "Validation Error", "Please fix the following issues:", validationResult);
                 return;
             }
 
-            // Update book
             currentBook.setTitle(title);
             currentBook.setAuthor(author);
             currentBook.setPublicationYear(year);
 
-            // Save to database
             String saveResult = bookService.updateBook(currentBook);
 
             if (saveResult.equals("Book updated successfully!")) {
                 showAlert(AlertType.INFORMATION, "Success", "Book Updated", saveResult);
-                setBook(currentBook); // Refresh the display
+
+                // Update view and switch back
+                setBook(currentBook);
+                bookTitleLabel.setVisible(true);
+                bookAuthorLabel.setVisible(true);
+                bookYearLabel.setVisible(true);
+                titleEditLabel.setVisible(false);
                 titleTextField.setVisible(false);
+                authorEditLabel.setVisible(false);
                 authorTextField.setVisible(false);
+                yearEditLabel.setVisible(false);
                 yearTextField.setVisible(false);
                 saveButton.setVisible(false);
             } else {

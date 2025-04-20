@@ -24,6 +24,10 @@ public class ReaderDetailsController extends BaseController {
     private TextField emailTextField;
     @FXML
     private Button saveButton;
+    @FXML
+    private Label nameEditLabel;  // New label for edit mode
+    @FXML
+    private Label emailEditLabel; // New label for edit mode
 
     private LoanService loanService;
     private ReaderService readerService;
@@ -53,7 +57,14 @@ public class ReaderDetailsController extends BaseController {
         nameTextField.setText(currentReader.getName());
         emailTextField.setText(currentReader.getEmail());
 
+        // Hide view labels
+        readerNameLabel.setVisible(false);
+        readerEmailLabel.setVisible(false);
+
+        // Show edit controls
+        nameEditLabel.setVisible(true);
         nameTextField.setVisible(true);
+        emailEditLabel.setVisible(true);
         emailTextField.setVisible(true);
         saveButton.setVisible(true);
     }
@@ -86,9 +97,17 @@ public class ReaderDetailsController extends BaseController {
 
         if (saveResult.equals("Reader updated successfully!")) {
             showAlert(AlertType.INFORMATION, "Success", "Reader Updated", saveResult);
+
+            // Update view labels with new values
             readerNameLabel.setText(currentReader.getName());
             readerEmailLabel.setText(currentReader.getEmail());
+
+            // Switch back to view mode
+            readerNameLabel.setVisible(true);
+            readerEmailLabel.setVisible(true);
+            nameEditLabel.setVisible(false);
             nameTextField.setVisible(false);
+            emailEditLabel.setVisible(false);
             emailTextField.setVisible(false);
             saveButton.setVisible(false);
         } else {

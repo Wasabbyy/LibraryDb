@@ -149,3 +149,42 @@
     -fx-cursor: hand;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
 }
+/* ComboBox styling for dark theme */
+.dark-combo-box {
+    -fx-background-color: #424242;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-prompt-text-fill: #b0b0b0;
+}
+
+.dark-combo-box .list-cell {
+    -fx-background-color: #424242;
+    -fx-text-fill: white;
+}
+
+.dark-combo-box .arrow {
+    -fx-background-color: white;
+}
+
+.dark-combo-box .combo-box-popup .list-view {
+    -fx-background-color: #424242;
+    -fx-border-color: #2196F3;
+}
+
+.dark-combo-box .combo-box-popup .list-cell {
+    -fx-background-color: #424242;
+    -fx-text-fill: white;
+    -fx-padding: 5px;
+}
+
+.dark-combo-box .combo-box-popup .list-cell:hover {
+    -fx-background-color: #505050;
+}
+
+.dark-combo-box .combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}

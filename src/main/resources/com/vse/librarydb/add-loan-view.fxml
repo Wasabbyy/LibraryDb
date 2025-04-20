@@ -11,6 +11,7 @@
 
 <VBox alignment="CENTER" spacing="15.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.vse.librarydb.controllers.AddLoanController"
+      stylesheets="@styles.css"
       style="-fx-background-color: #2b2b2b; -fx-padding: 30;" prefWidth="1000" prefHeight="800">
 
     <Label text="Create New Loan" style="-fx-text-fill: #e0e0e0; -fx-font-size: 24px; -fx-font-weight: bold;">
@@ -20,20 +21,20 @@
     </Label>
 
     <Label text="Select Reader:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
-    <ComboBox fx:id="readerComboBox" promptText="Choose a reader"
-              style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400;"/>
+    <ComboBox fx:id="readerComboBox" promptText="Choose a reader" styleClass="dark-combo-box"
+              style="-fx-pref-width: 400; -fx-pref-height: 40;"/>
 
     <Label text="Select Book:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
-    <ComboBox fx:id="bookComboBox" promptText="Choose a book"
-              style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400;"/>
+    <ComboBox fx:id="bookComboBox" promptText="Choose a book" styleClass="dark-combo-box"
+              style="-fx-pref-width: 400; -fx-pref-height: 40;"/>
 
     <Label text="Loan Duration (days):" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
-    <TextField fx:id="daysField" promptText="Enter loan duration (e.g., 14)"
-               style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 400; -fx-pref-height: 40;"/>
+    <TextField fx:id="daysField" promptText="Enter loan duration (e.g., 14)" styleClass="dark-text-field"
+               style="-fx-pref-width: 400; -fx-max-width: 400;  -fx-pref-height: 40;"/>
 
-    <Button text="Create Loan" onAction="#onSaveLoanButtonClick"
-            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
+    <Button text="Create Loan" onAction="#onSaveLoanButtonClick" styleClass="save-button"
+            style="-fx-pref-width: 200; -fx-pref-height: 40;"/>
 
-    <Button text="Main Menu" onAction="#onReturnToMenuButtonClick"
-            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-pref-height: 40; -fx-font-weight: bold;"/>
+    <Button text="Main Menu" onAction="#onReturnToMenuButtonClick" styleClass="action-button"
+            style="-fx-pref-width: 200; -fx-pref-height: 40;"/>
 </VBox>

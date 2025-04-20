@@ -7,8 +7,8 @@
 <VBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.vse.librarydb.controllers.BookDetailsController"
       stylesheets="@styles.css"
-      spacing="10" alignment="CENTER"
-      style="-fx-background-color: #2b2b2b; -fx-padding: 20;"
+      spacing="20" alignment="CENTER"
+      style="-fx-background-color: #2b2b2b; -fx-padding: 30;"
       prefWidth="1500" prefHeight="1000">
 
     <Label text="Book Details" style="-fx-text-fill: #e0e0e0; -fx-font-size: 24px; -fx-font-weight: bold;">
@@ -17,27 +17,49 @@
         </effect>
     </Label>
 
-    <Label fx:id="bookTitleLabel" text="Title: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
-    <Label fx:id="bookAuthorLabel" text="Author: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
-    <Label fx:id="bookYearLabel" text="Year: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
-    <Label fx:id="bookNoteLabel" text="Year: " style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;"/>
-    <Label text="Loans:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER"/>
+            <ColumnConstraints halignment="LEFT" hgrow="NEVER"/>
+        </columnConstraints>
+
+        <!-- View Mode -->
+        <Label text="Title:" styleClass="detail-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="bookTitleLabel" text="" styleClass="detail-label" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Author:" styleClass="detail-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="bookAuthorLabel" text="" styleClass="detail-label" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Year:" styleClass="detail-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="bookYearLabel" text="" styleClass="detail-label" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Note:" styleClass="detail-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="bookNoteLabel" text="" styleClass="detail-label" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Edit Mode (initially hidden) -->
+        <Label text="Title:" styleClass="detail-label" visible="false"
+               fx:id="titleEditLabel" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="titleTextField" promptText="Edit title" visible="false"
+                   styleClass="dark-text-field" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Author:" styleClass="detail-label" visible="false"
+               fx:id="authorEditLabel" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="authorTextField" promptText="Edit author" visible="false"
+                   styleClass="dark-text-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Year:" styleClass="detail-label" visible="false"
+               fx:id="yearEditLabel" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="yearTextField" promptText="Edit year" visible="false"
+                   styleClass="dark-text-field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label text="Loans:" styleClass="section-header"/>
     <ListView fx:id="loansListView" styleClass="dark-list-view"
-              style="-fx-pref-width: 800px; -fx-pref-height: 300px; -fx-min-height: 100px; -fx-max-width: 800px;"/>
+              style="-fx-pref-width: 800; -fx-pref-height: 300;"/>
 
-
-    <Button text="Edit" onAction="#onEdit"
-            styleClass="action-button"/>
-
-    <TextField fx:id="titleTextField" promptText="Edit Title" visible="false"
-               styleClass="dark-text-field"/>
-
-    <TextField fx:id="authorTextField" promptText="Edit Author" visible="false"
-               styleClass="dark-text-field"/>
-
-    <TextField fx:id="yearTextField" promptText="Edit Year" visible="false"
-               styleClass="dark-text-field"/>
-
-    <Button fx:id="saveButton" text="Save" onAction="#onSave" visible="false"
-            styleClass="save-button"/>
+    <VBox spacing="10" alignment="CENTER">
+        <Button text="Edit" onAction="#onEdit" styleClass="action-button"/>
+        <Button fx:id="saveButton" text="Save" onAction="#onSave" visible="false"
+                styleClass="save-button"/>
+    </VBox>
 </VBox>
