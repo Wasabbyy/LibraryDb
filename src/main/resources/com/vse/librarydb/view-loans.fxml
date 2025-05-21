@@ -27,5 +27,34 @@
     <!-- ListView -->
     <ListView fx:id="loansListView" styleClass="dark-list-view"
               layoutX="100" layoutY="100"
-              style="-fx-pref-width: 800; -fx-pref-height: 300;"/>
+              style="-fx-pref-width: 800; -fx-pref-height: 450; -fx-max-height: 250"/>
+
+    <!-- Search Section -->
+    <Label text="Filter Loans:" layoutX="100" layoutY="370"
+           style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
+
+    <!-- Book Search -->
+    <Label text="By Book Title:" layoutX="100" layoutY="400"
+           style="-fx-text-fill: #e0e0e0; -fx-font-size: 12px;"/>
+
+    <TextField fx:id="bookSearchField" promptText="Enter book title"
+               layoutX="100" layoutY="420"
+               style="-fx-pref-width: 340; -fx-background-color: #3c3f41; -fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
+
+    <Button text="Search" onAction="#onBookSearch"
+            layoutX="450" layoutY="420"
+            style="-fx-pref-width: 80; -fx-background-color: #4a6da7; -fx-text-fill: white;"/>
+
+    <!-- Reader Search -->
+    <Label text="By Reader Name:" layoutX="550" layoutY="400"
+           style="-fx-text-fill: #e0e0e0; -fx-font-size: 12px;"/>
+
+    <TextField fx:id="readerSearchField" promptText="Enter reader name"
+               layoutX="550" layoutY="420"
+               style="-fx-pref-width: 340; -fx-background-color: #3c3f41; -fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
+
+    <Button text="Search" onAction="#onReaderSearch"
+            layoutX="900" layoutY="420"
+            style="-fx-pref-width: 80; -fx-background-color: #4a6da7; -fx-text-fill: white;"/>
+
 </Pane>

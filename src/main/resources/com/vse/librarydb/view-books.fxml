@@ -27,5 +27,18 @@
     <!-- ListView -->
     <ListView fx:id="booksListView" styleClass="dark-list-view"
               layoutX="100" layoutY="100"
-              style="-fx-pref-width: 800; -fx-pref-height: 300;"/>
+              style="-fx-pref-width: 800; -fx-pref-height: 500; -fx-max-height: 300"/>
+
+    <!-- Search Section -->
+    <Label text="Search Books:" layoutX="100" layoutY="420"
+           style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
+
+    <TextField fx:id="searchField" promptText="Enter title, author, or year"
+               layoutX="100" layoutY="450"
+               style="-fx-pref-width: 700; -fx-background-color: #3c3f41; -fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
+
+    <Button text="Search" onAction="#onSearch"
+            layoutX="820" layoutY="450"
+            style="-fx-pref-width: 80; -fx-background-color: #4a6da7; -fx-text-fill: white;"/>
+
 </Pane>
