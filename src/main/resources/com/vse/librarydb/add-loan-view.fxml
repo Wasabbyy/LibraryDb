@@ -19,6 +19,9 @@
             <DropShadow color="#4a4a4a" radius="5" spread="0.2"/>
         </effect>
     </Label>
+    <Label fx:id="databaseStatusLabel" text="Database: Checking..."
+           style="-fx-text-fill: grey; -fx-font-weight: bold;"
+           layoutX="800" layoutY="20"/>
 
     <Label text="Select Reader:" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
     <ComboBox fx:id="readerComboBox" promptText="Choose a reader" styleClass="dark-combo-box"

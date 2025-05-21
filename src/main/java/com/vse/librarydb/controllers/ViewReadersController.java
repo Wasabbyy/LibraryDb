@@ -34,6 +34,7 @@ public class ViewReadersController extends BaseController {
     public void initialize() {
         allReaders = readerService.getAllReaders();
         refreshReaderList(allReaders);
+        initializeDatabaseStatus();
 
         readersListView.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {

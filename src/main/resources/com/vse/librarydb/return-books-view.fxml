@@ -2,11 +2,13 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.effect.DropShadow?>
-
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.vse.librarydb.controllers.ReturnBooksController"
       stylesheets="@styles.css"
@@ -17,10 +19,20 @@
             <DropShadow color="#4a4a4a" radius="5" spread="0.2"/>
         </effect>
     </Label>
+    <Label fx:id="databaseStatusLabel" text="Database: Checking..."
+           style="-fx-text-fill: grey; -fx-font-weight: bold;"
+           layoutX="800" layoutY="20"/>
 
     <ListView fx:id="loanedBooksListView" styleClass="dark-list-view"
               style="-fx-pref-width: 800; -fx-pref-height: 500;"/>
 
+    <!-- Search Section -->
+    <HBox alignment="CENTER" spacing="10">
+        <TextField fx:id="searchField" promptText="Search by reader or book title"
+                   style="-fx-pref-width: 600; -fx-background-color: #3c3f41; -fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
+        <Button text="Search" onAction="#onSearch"
+                style="-fx-background-color: #4a6da7; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 100;"/>
+    </HBox>
 
     <Button text="Return Selected Book" onAction="#onReturnButtonClick"
             style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 200; -fx-min-width: 200; -fx-min-height: 40; -fx-pref-height: 40; -fx-font-weight: bold;"/>

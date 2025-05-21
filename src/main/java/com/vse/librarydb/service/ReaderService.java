@@ -5,25 +5,61 @@ import com.vse.librarydb.model.Reader;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.PersistenceException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ReaderService {
+    private static final Logger logger = Logger.getLogger(ReaderService.class.getName());
     private EntityManagerFactory emf;
     public Validator validator;
+    private boolean dbAvailable = true;
+    private ScheduledExecutorService connectionMonitor;
 
     public ReaderService() {
-        emf = Persistence.createEntityManagerFactory("LibraryDBPU");
-        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-        this.validator = factory.getValidator();
+        try {
+            emf = Persistence.createEntityManagerFactory("LibraryDBPU");
+            ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+            this.validator = factory.getValidator();
+            startConnectionMonitor();
+        } catch (PersistenceException e) {
+            logger.log(Level.SEVERE, "Failed to initialize database connection", e);
+            dbAvailable = false;
+            startConnectionMonitor();
+        }
     }
 
-    // Add this new validation method
+    private void startConnectionMonitor() {
+        if (connectionMonitor != null && !connectionMonitor.isShutdown()) {
+            connectionMonitor.shutdown();
+        }
+
+        connectionMonitor = Executors.newSingleThreadScheduledExecutor();
+        connectionMonitor.scheduleAtFixedRate(() -> {
+            try {
+                EntityManager em = emf.createEntityManager();
+                em.close();
+                if (!dbAvailable) {
+                    logger.info("Database connection restored");
+                    dbAvailable = true;
+                }
+            } catch (Exception e) {
+                dbAvailable = false;
+            }
+        }, 5, 5, TimeUnit.SECONDS);
+    }
+
     public String validateReader(String firstName, String lastName, String email) {
         Reader reader = new Reader(firstName, lastName, email);
         Set<ConstraintViolation<Reader>> violations = validator.validate(reader);
@@ -42,11 +78,14 @@ public class ReaderService {
     }
 
     public String addReader(String firstName, String lastName, String email) {
+        if (!dbAvailable) {
+            return "Database unavailable. Please try again later.";
+        }
+
         EntityManager em = emf.createEntityManager();
         try {
             Reader reader = new Reader(firstName, lastName, email);
 
-            // Validate the Reader object
             String validationResult = validateReader(firstName, lastName, email);
             if (!validationResult.equals("Validation successful")) {
                 return validationResult;
@@ -57,18 +96,22 @@ public class ReaderService {
             em.getTransaction().commit();
             return "Reader added successfully!";
         } catch (Exception e) {
-            e.printStackTrace();
+            handleDatabaseError(e);
             return "An error occurred while adding the reader: " + e.getMessage();
         } finally {
-            em.close();
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
     }
 
-    // Update this method to return String
     public String updateReader(Reader reader) {
+        if (!dbAvailable) {
+            return "Database unavailable. Please try again later.";
+        }
+
         EntityManager em = emf.createEntityManager();
         try {
-            // Validate before updating
             String validationResult = validateReader(reader.getFirstName(), reader.getLastName(), reader.getEmail());
             if (!validationResult.equals("Validation successful")) {
                 return validationResult;
@@ -86,40 +129,65 @@ public class ReaderService {
                 return "Reader not found!";
             }
         } catch (Exception e) {
-            if (em.getTransaction().isActive()) {
-                em.getTransaction().rollback();
-            }
-            e.printStackTrace();
+            handleDatabaseError(e);
             return "An error occurred while updating the reader: " + e.getMessage();
         } finally {
-            em.close();
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
     }
+
     public List<Reader> getAllReaders() {
+        if (!dbAvailable) {
+            return Collections.emptyList();
+        }
+
         EntityManager em = emf.createEntityManager();
         try {
             return em.createQuery("SELECT r FROM Reader r", Reader.class).getResultList();
         } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+            handleDatabaseError(e);
+            return Collections.emptyList();
         } finally {
-            em.close();
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
     }
 
     public Reader getReaderById(Long id) {
+        if (!dbAvailable) {
+            return null;
+        }
+
         EntityManager em = emf.createEntityManager();
         try {
             return em.find(Reader.class, id);
         } catch (Exception e) {
-            e.printStackTrace();
+            handleDatabaseError(e);
             return null;
         } finally {
-            em.close();
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
     }
 
+    private void handleDatabaseError(Exception e) {
+        logger.log(Level.SEVERE, "Database error occurred", e);
+        dbAvailable = false;
+        startConnectionMonitor();
+    }
+
+    public boolean isDatabaseAvailable() {
+        return dbAvailable;
+    }
+
     public void close() {
+        if (connectionMonitor != null) {
+            connectionMonitor.shutdown();
+        }
         if (emf != null && emf.isOpen()) {
             emf.close();
         }

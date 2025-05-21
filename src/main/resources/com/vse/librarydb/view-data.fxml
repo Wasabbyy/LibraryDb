@@ -15,6 +15,9 @@
             layoutX="20" layoutY="20"
             style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px;
                    -fx-pref-width: 150; -fx-pref-height: 40; -fx-font-weight: bold;"/>
+    <Label fx:id="databaseStatusLabel" text="Database: Checking..."
+           style="-fx-text-fill: grey; -fx-font-weight: bold;"
+           layoutX="800" layoutY="20"/>
 
     <!-- Title -->
     <Label text="View Data" layoutX="450" layoutY="30"

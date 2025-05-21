@@ -1,17 +1,14 @@
 package com.vse.librarydb.controllers;
 
 import com.vse.librarydb.model.Loan;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
 import com.vse.librarydb.model.Book;
 import com.vse.librarydb.service.BookService;
 import com.vse.librarydb.service.LoanService;
-import javafx.scene.control.Alert.AlertType;
-
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
 import java.util.List;
 
 public class BookDetailsController extends BaseController {
-
     @FXML private Label bookTitleLabel;
     @FXML private Label bookAuthorLabel;
     @FXML private Label bookYearLabel;
@@ -24,7 +21,6 @@ public class BookDetailsController extends BaseController {
     @FXML private Label titleEditLabel;
     @FXML private Label authorEditLabel;
     @FXML private Label yearEditLabel;
-
     private BookService bookService;
     private LoanService loanService;
     private Book currentBook;
@@ -32,17 +28,30 @@ public class BookDetailsController extends BaseController {
     public BookDetailsController() {
         bookService = new BookService();
         loanService = new LoanService();
+        DatabaseStatusMonitor.getInstance().addListener(this);
+    }
+    @FXML
+    public void initialize() {
+        initializeDatabaseStatus(); // Initialize the status label
     }
 
     public void setBook(Book book) {
         this.currentBook = book;
-        bookTitleLabel.setText("Title: " + book.getTitle());
-        bookAuthorLabel.setText("Author: " + book.getAuthor());
-        bookYearLabel.setText("Year: " + book.getPublicationYear());
-        bookNoteLabel.setText("Note: " + (book.getNote() != null ? book.getNote() : "No note available"));
+        updateBookDetails();
+        loadLoans();
+    }
+
+    private void updateBookDetails() {
+        bookTitleLabel.setText("Title: " + currentBook.getTitle());
+        bookAuthorLabel.setText("Author: " + currentBook.getAuthor());
+        bookYearLabel.setText("Year: " + currentBook.getPublicationYear());
+        bookNoteLabel.setText("Note: " + (currentBook.getNote() != null ? currentBook.getNote() : "No note available"));
+    }
+
+    private void loadLoans() {
 
         loansListView.getItems().clear();
-        List<Loan> loans = loanService.getLoansByBook(book);
+        List<Loan> loans = loanService.getLoansByBook(currentBook);
         for (Loan loan : loans) {
             loansListView.getItems().add("Reader: " + loan.getReader().getFirstName() + " " +
                     loan.getReader().getLastName() + ", Loaned on: " + loan.getLoanDate());
@@ -51,23 +60,16 @@ public class BookDetailsController extends BaseController {
 
     @FXML
     private void onEdit() {
+        if (!bookService.isDatabaseAvailable()) {
+            showAlert(Alert.AlertType.ERROR, "Database Error", "Database Unavailable",
+                    "Cannot edit book while database is unavailable.");
+            return;
+        }
+
         titleTextField.setText(currentBook.getTitle());
         authorTextField.setText(currentBook.getAuthor());
         yearTextField.setText(String.valueOf(currentBook.getPublicationYear()));
-
-        // Hide view labels
-        bookTitleLabel.setVisible(false);
-        bookAuthorLabel.setVisible(false);
-        bookYearLabel.setVisible(false);
-
-        // Show edit controls
-        titleEditLabel.setVisible(true);
-        titleTextField.setVisible(true);
-        authorEditLabel.setVisible(true);
-        authorTextField.setVisible(true);
-        yearEditLabel.setVisible(true);
-        yearTextField.setVisible(true);
-        saveButton.setVisible(true);
+        toggleEditMode(true);
     }
 
     @FXML
@@ -79,7 +81,7 @@ public class BookDetailsController extends BaseController {
 
             String validationResult = bookService.validateBook(title, author, year);
             if (!validationResult.equals("Validation successful")) {
-                showAlert(AlertType.ERROR, "Validation Error", "Please fix the following issues:", validationResult);
+                showAlert(Alert.AlertType.ERROR, "Validation Error", "Please fix the following issues:", validationResult);
                 return;
             }
 
@@ -88,39 +90,48 @@ public class BookDetailsController extends BaseController {
             currentBook.setPublicationYear(year);
 
             String saveResult = bookService.updateBook(currentBook);
-
-            if (saveResult.equals("Book updated successfully!")) {
-                showAlert(AlertType.INFORMATION, "Success", "Book Updated", saveResult);
-
-                // Update view and switch back
-                setBook(currentBook);
-                bookTitleLabel.setVisible(true);
-                bookAuthorLabel.setVisible(true);
-                bookYearLabel.setVisible(true);
-                titleEditLabel.setVisible(false);
-                titleTextField.setVisible(false);
-                authorEditLabel.setVisible(false);
-                authorTextField.setVisible(false);
-                yearEditLabel.setVisible(false);
-                yearTextField.setVisible(false);
-                saveButton.setVisible(false);
-            } else {
-                showAlert(AlertType.ERROR, "Error", "Failed to update book", saveResult);
-            }
+            handleSaveResult(saveResult);
         } catch (NumberFormatException e) {
-            showAlert(AlertType.ERROR, "Invalid Input", "Publication Year must be a number",
+            showAlert(Alert.AlertType.ERROR, "Invalid Input", "Publication Year must be a number",
                     "Please enter a valid year (e.g., 2023)");
         } catch (Exception e) {
-            showAlert(AlertType.ERROR, "Error", "An unexpected error occurred",
-                    e.getMessage());
+            showAlert(Alert.AlertType.ERROR, "Error", "An unexpected error occurred", e.getMessage());
         }
     }
 
-    private void showAlert(AlertType type, String title, String header, String content) {
-        Alert alert = new Alert(type);
-        alert.setTitle(title);
-        alert.setHeaderText(header);
-        alert.setContentText(content);
-        alert.showAndWait();
+    private void handleSaveResult(String result) {
+        if (result.equals("Book updated successfully!")) {
+            showAlert(Alert.AlertType.INFORMATION, "Success", "Book Updated", result);
+            updateBookDetails();
+            toggleEditMode(false);
+        } else {
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to update book", result);
+        }
+    }
+
+    private void toggleEditMode(boolean editMode) {
+        bookTitleLabel.setVisible(!editMode);
+        bookAuthorLabel.setVisible(!editMode);
+        bookYearLabel.setVisible(!editMode);
+        titleEditLabel.setVisible(editMode);
+        titleTextField.setVisible(editMode);
+        authorEditLabel.setVisible(editMode);
+        authorTextField.setVisible(editMode);
+        yearEditLabel.setVisible(editMode);
+        yearTextField.setVisible(editMode);
+        saveButton.setVisible(editMode);
+    }
+
+    @Override
+    public void onDatabaseConnected() {
+        super.onDatabaseConnected();
+        if (currentBook != null) {
+            loadLoans();
+        }
+    }
+
+    @Override
+    public void onDatabaseDisconnected() {
+        super.onDatabaseDisconnected();
     }
 }

@@ -1,25 +1,27 @@
 package com.vse.librarydb;
 
+import com.vse.librarydb.controllers.DatabaseStatusMonitor;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class LibraryApp extends Application {
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("intro-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Library App");
-        stage.setWidth(1000);  // ← This should match or exceed VBox prefWidth
-        stage.setHeight(600);
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
+        stage.setTitle("Library Management System");
         stage.setScene(scene);
         stage.show();
     }
 
     @Override
     public void stop() throws Exception {
-        // Perform any necessary cleanup here
+        DatabaseStatusMonitor.getInstance().shutdown();
+        super.stop();
     }
 
     public static void main(String[] args) {

@@ -16,6 +16,9 @@
             <DropShadow color="#4a4a4a" radius="5" spread="0.2"/>
         </effect>
     </Label>
+    <Label fx:id="databaseStatusLabel" text="Database: Checking..."
+           style="-fx-text-fill: grey; -fx-font-weight: bold;"
+           layoutX="800" layoutY="20"/>
 
     <GridPane hgap="10" vgap="10" alignment="CENTER">
         <columnConstraints>

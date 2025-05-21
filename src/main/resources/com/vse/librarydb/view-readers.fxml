@@ -16,6 +16,10 @@
             layoutX="20" layoutY="20"
             styleClass="back-button"/>
 
+    <Label fx:id="databaseStatusLabel" text="Database: Checking..."
+           style="-fx-text-fill: grey; -fx-font-weight: bold;"
+           layoutX="800" layoutY="20"/>
+
     <!-- Title at fixed 450px position -->
     <Label text="Reader List" layoutX="450" layoutY="30"
            style="-fx-text-fill: #e0e0e0; -fx-font-size: 24px; -fx-font-weight: bold;">

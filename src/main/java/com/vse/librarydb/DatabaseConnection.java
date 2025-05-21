@@ -1,4 +1,4 @@
-package com.vse.librarydb.controllers;
+package com.vse.librarydb;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

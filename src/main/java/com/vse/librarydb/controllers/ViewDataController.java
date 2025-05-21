@@ -1,24 +1,27 @@
 package com.vse.librarydb.controllers;
 
+import com.vse.librarydb.LibraryApp;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import com.vse.librarydb.LibraryApp;
-
 import java.io.IOException;
 
 public class ViewDataController extends BaseController {
+    @FXML private Button backButton;
+    @FXML private Button viewReadersButton;
+    @FXML private Button viewBooksButton;
+    @FXML private Button viewLoansButton;
 
     @FXML
-    private Button backButton;
-    @FXML
-    private Button viewReadersButton;
-    @FXML
-    private Button viewBooksButton;
-    @FXML
-    private Button viewLoansButton;
+    public void initialize() {
+        initializeDatabaseStatus(); // Initialize the status label
+    }
+    public ViewDataController() {
+        DatabaseStatusMonitor.getInstance().addListener(this);
+    }
 
     @FXML
     protected void onViewReadersButtonClick() throws IOException {
@@ -37,10 +40,20 @@ public class ViewDataController extends BaseController {
 
     @FXML
     protected void onReturnToMenuButtonClick() throws IOException {
+        DatabaseStatusMonitor.getInstance().removeListener(this);
         Stage stage = (Stage) backButton.getScene().getWindow();
-        stage.setWidth(1000);
-        stage.setHeight(600);
         super.onReturnToMenuButtonClick(stage);
+    }
+
+    @Override
+    public void onDatabaseConnected() {
+        super.onDatabaseConnected();
+        // No data to refresh in this controller
+    }
+
+    @Override
+    public void onDatabaseDisconnected() {
+        super.onDatabaseDisconnected();
     }
 
     private void navigateTo(String fxmlFile) throws IOException {

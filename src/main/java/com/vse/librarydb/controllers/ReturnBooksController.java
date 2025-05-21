@@ -10,19 +10,25 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class ReturnBooksController extends BaseController {
     @FXML
     private ListView<String> loanedBooksListView;
     @FXML
     private Button returnButton;
+    @FXML
+    private TextField searchField;
 
     private final LoanService loanService = new LoanService();
     private List<Loan> loanedBooks;
+    private List<Loan> allLoanedBooks;
 
     @FXML
     public void initialize() {
-        loadLoanedBooks();
+        loadAllLoanedBooks();
+        refreshLoanedBooksList(allLoanedBooks);
+        initializeDatabaseStatus();
 
         // Add double-click to view note
         loanedBooksListView.setOnMouseClicked(event -> {
@@ -32,17 +38,35 @@ public class ReturnBooksController extends BaseController {
         });
     }
 
-    private void loadLoanedBooks() {
-        loanedBooks = new ArrayList<>(loanService.getAllLoans().stream()
+    private void loadAllLoanedBooks() {
+        allLoanedBooks = loanService.getAllLoans().stream()
                 .filter(loan -> loan.getReturnDate() == null)
-                .toList());
+                .collect(Collectors.toList());
+        loanedBooks = new ArrayList<>(allLoanedBooks);
+    }
 
+    private void refreshLoanedBooksList(List<Loan> loans) {
         loanedBooksListView.getItems().clear();
-        for (Loan loan : loanedBooks) {
+        for (Loan loan : loans) {
             String noteIndicator = loan.getBook().getNote() != null ? " (Has note)" : "";
-            loanedBooksListView.getItems().add("Book: " + loan.getBook().getTitle() +
-                    " (Loaned on: " + loan.getLoanDate() + ")" + noteIndicator);
+            loanedBooksListView.getItems().add(
+                    "Reader: " + loan.getReader().getName() +
+                            " | Book: " + loan.getBook().getTitle() +
+                            " | Loaned on: " + loan.getLoanDate() +
+                            noteIndicator
+            );
         }
+    }
+
+    @FXML
+    private void onSearch() {
+        String searchTerm = searchField.getText().toLowerCase();
+        List<Loan> filteredLoans = allLoanedBooks.stream()
+                .filter(loan -> loan.getReader().getName().toLowerCase().contains(searchTerm) ||
+                        loan.getBook().getTitle().toLowerCase().contains(searchTerm))
+                .collect(Collectors.toList());
+        loanedBooks = new ArrayList<>(filteredLoans);
+        refreshLoanedBooksList(loanedBooks);
     }
 
     @FXML
@@ -63,7 +87,8 @@ public class ReturnBooksController extends BaseController {
         result.ifPresent(note -> {
             String resultMessage = loanService.returnBook(loan.getId(), note);
             showAlert("Return Status", resultMessage, Alert.AlertType.INFORMATION);
-            loadLoanedBooks(); // Refresh the list
+            loadAllLoanedBooks(); // Refresh the list
+            onSearch(); // Reapply current filter
         });
     }
 

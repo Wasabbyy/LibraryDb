@@ -3,6 +3,7 @@ package com.vse.librarydb.controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -16,38 +17,42 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ViewBooksController extends BaseController {
-    @FXML
-    private ListView<String> booksListView;
-    @FXML
-    private Button backButton;
-    @FXML
-    private TextField searchField;
+    @FXML private ListView<String> booksListView;
+    @FXML private Button backButton;
+    @FXML private TextField searchField;
 
     private BookService bookService;
     private List<Book> allBooks;
 
     public ViewBooksController() {
         bookService = new BookService();
+        DatabaseStatusMonitor.getInstance().addListener(this);
     }
 
     @FXML
     public void initialize() {
-        allBooks = bookService.getAllBooks();
-        refreshBookList(allBooks);
+        loadBooks();
+        initializeDatabaseStatus();
 
         booksListView.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
                 int selectedIndex = booksListView.getSelectionModel().getSelectedIndex();
-                if (selectedIndex >= 0) {
+                if (selectedIndex >= 0 && !allBooks.isEmpty()) {
                     Book selectedBook = allBooks.get(selectedIndex);
                     try {
                         openBookDetails(selectedBook);
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        showAlert(Alert.AlertType.ERROR, "Error", "Failed to open book details", e.getMessage());
                     }
                 }
             }
         });
+    }
+
+    private void loadBooks() {
+        allBooks = bookService.getAllBooks();
+        refreshBookList(allBooks);
+
     }
 
     @FXML
@@ -83,8 +88,20 @@ public class ViewBooksController extends BaseController {
         stage.show();
     }
 
+    @Override
+    public void onDatabaseConnected() {
+        super.onDatabaseConnected();
+        loadBooks(); // Refresh data when connection is restored
+    }
+
+    @Override
+    public void onDatabaseDisconnected() {
+        super.onDatabaseDisconnected();
+    }
+
     @FXML
     protected void onReturnToMenuButtonClick() throws IOException {
+        DatabaseStatusMonitor.getInstance().removeListener(this);
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("/com/vse/librarydb/view-data.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) backButton.getScene().getWindow();

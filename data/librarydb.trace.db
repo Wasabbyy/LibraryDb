@@ -581,3 +581,9 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/fstup/I
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
 	... 105 more
+2025-05-21 22:51:20.748526+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Tento objekt byl již uzavřen
+The object is already closed [90007-224]
+2025-05-21 22:54:11.752898+02:00 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Tento objekt byl již uzavřen
+The object is already closed [90007-224]

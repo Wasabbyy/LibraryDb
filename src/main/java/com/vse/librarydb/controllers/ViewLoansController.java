@@ -3,6 +3,7 @@ package com.vse.librarydb.controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -36,7 +37,14 @@ public class ViewLoansController extends BaseController {
     public void initialize() {
         allLoans = loanService.getAllLoans();
         refreshLoanList(allLoans);
+        initializeDatabaseStatus();
     }
+    private void loadLoans() {
+
+        allLoans = loanService.getAllLoans();
+        refreshLoanList(allLoans);
+    }
+
 
     @FXML
     private void onBookSearch() {
@@ -55,6 +63,18 @@ public class ViewLoansController extends BaseController {
                 .collect(Collectors.toList());
         refreshLoanList(filteredLoans);
     }
+
+    @Override
+    public void onDatabaseConnected() {
+        super.onDatabaseConnected();
+        loadLoans();
+    }
+
+    @Override
+    public void onDatabaseDisconnected() {
+        super.onDatabaseDisconnected();
+    }
+
 
     private void refreshLoanList(List<Loan> loans) {
         loansListView.getItems().clear();

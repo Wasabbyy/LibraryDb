@@ -7,32 +7,71 @@ import com.vse.librarydb.model.Book;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.PersistenceException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
 
 import java.time.LocalDate;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class LoanService {
+    private static final Logger logger = Logger.getLogger(LoanService.class.getName());
     private EntityManagerFactory emf;
     private Validator validator;
+    private boolean dbAvailable = true;
+    private ScheduledExecutorService connectionMonitor;
 
     public LoanService() {
-        emf = Persistence.createEntityManagerFactory("LibraryDBPU");
-        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-        this.validator = factory.getValidator();
+        try {
+            emf = Persistence.createEntityManagerFactory("LibraryDBPU");
+            ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+            this.validator = factory.getValidator();
+            startConnectionMonitor();
+        } catch (PersistenceException e) {
+            logger.log(Level.SEVERE, "Failed to initialize database connection", e);
+            dbAvailable = false;
+            startConnectionMonitor();
+        }
+    }
+
+    private void startConnectionMonitor() {
+        if (connectionMonitor != null && !connectionMonitor.isShutdown()) {
+            connectionMonitor.shutdown();
+        }
+
+        connectionMonitor = Executors.newSingleThreadScheduledExecutor();
+        connectionMonitor.scheduleAtFixedRate(() -> {
+            try {
+                EntityManager em = emf.createEntityManager();
+                em.close();
+                if (!dbAvailable) {
+                    logger.info("Database connection restored");
+                    dbAvailable = true;
+                }
+            } catch (Exception e) {
+                dbAvailable = false;
+            }
+        }, 5, 5, TimeUnit.SECONDS);
     }
 
     public String addLoan(Reader reader, Book book, LocalDate loanDate, int rentPeriodDays) {
+        if (!dbAvailable) {
+            return "Database unavailable. Please try again later.";
+        }
+
         EntityManager em = emf.createEntityManager();
         try {
-            // Create a new Loan - initially not delayed and no return date
             Loan loan = new Loan(reader, book, loanDate, rentPeriodDays);
 
-            // Validate the Loan
             Set<ConstraintViolation<Loan>> violations = validator.validate(loan);
             if (!violations.isEmpty()) {
                 StringBuilder errorMessage = new StringBuilder("Validation errors:\n");
@@ -45,34 +84,32 @@ public class LoanService {
                 return errorMessage.toString();
             }
 
-            // Mark book as unavailable
             book.setAvailable(false);
 
-            // Persist the loan
             em.getTransaction().begin();
             em.persist(loan);
-            em.merge(book); // Update book status
+            em.merge(book);
             em.getTransaction().commit();
 
             return "Loan added successfully!";
         } catch (Exception e) {
-            if (em.getTransaction().isActive()) {
-                em.getTransaction().rollback();
-            }
-            e.printStackTrace();
+            handleDatabaseError(e);
             return "An error occurred while creating the loan: " + e.getMessage();
         } finally {
-            em.close();
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
     }
 
-
     public String returnBook(Long loanId, String note) {
+        if (!dbAvailable) {
+            return "Database unavailable. Please try again later.";
+        }
+
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-
-            // Find the loan by ID
             Loan loan = em.find(Loan.class, loanId);
             if (loan == null) {
                 return "Loan not found with ID: " + loanId;
@@ -82,18 +119,13 @@ public class LoanService {
                 return "This book has already been returned";
             }
 
-            // Set the return date to today's date
             loan.setReturnDate(LocalDate.now());
-
-            // Check if the book is returned late
             LocalDate dueDate = loan.getLoanDate().plusDays(loan.getRentPeriodDays());
             loan.setDelayed(LocalDate.now().isAfter(dueDate));
 
-            // Mark the book as available and update note
             Book book = loan.getBook();
             book.setAvailable(true);
 
-            // Only update note if one was provided (null or empty string won't overwrite existing note)
             if (note != null && !note.trim().isEmpty()) {
                 book.setNote(note.trim());
             }
@@ -104,38 +136,89 @@ public class LoanService {
 
             return "Book returned successfully!";
         } catch (Exception e) {
-            if (em.getTransaction().isActive()) {
-                em.getTransaction().rollback();
-            }
-            e.printStackTrace();
+            handleDatabaseError(e);
             return "An error occurred while returning the book: " + e.getMessage();
         } finally {
-            em.close();
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
         }
     }
+
     public List<Loan> getAllLoans() {
+        if (!dbAvailable) {
+            return Collections.emptyList();
+        }
+
         EntityManager em = emf.createEntityManager();
-        List<Loan> loans = em.createQuery("SELECT l FROM Loan l", Loan.class).getResultList();
-        em.close();
-        return loans;
-    }public List<Loan> getLoansByBook(Book book) {
-        EntityManager em = emf.createEntityManager();
-        List<Loan> loans = em.createQuery("SELECT l FROM Loan l WHERE l.book = :book", Loan.class)
-                .setParameter("book", book)
-                .getResultList();
-        em.close();
-        return loans;
-    }public List<Loan> getLoansByReader(Reader reader) {
-        EntityManager em = emf.createEntityManager();
-        List<Loan> loans = em.createQuery("SELECT l FROM Loan l WHERE l.reader = :reader", Loan.class)
-                .setParameter("reader", reader)
-                .getResultList();
-        em.close();
-        return loans;
+        try {
+            return em.createQuery("SELECT l FROM Loan l", Loan.class).getResultList();
+        } catch (Exception e) {
+            handleDatabaseError(e);
+            return Collections.emptyList();
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
+        }
     }
 
+    public List<Loan> getLoansByBook(Book book) {
+        if (!dbAvailable) {
+            return Collections.emptyList();
+        }
+
+        EntityManager em = emf.createEntityManager();
+        try {
+            return em.createQuery("SELECT l FROM Loan l WHERE l.book = :book", Loan.class)
+                    .setParameter("book", book)
+                    .getResultList();
+        } catch (Exception e) {
+            handleDatabaseError(e);
+            return Collections.emptyList();
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
+        }
+    }
+
+    public List<Loan> getLoansByReader(Reader reader) {
+        if (!dbAvailable) {
+            return Collections.emptyList();
+        }
+
+        EntityManager em = emf.createEntityManager();
+        try {
+            return em.createQuery("SELECT l FROM Loan l WHERE l.reader = :reader", Loan.class)
+                    .setParameter("reader", reader)
+                    .getResultList();
+        } catch (Exception e) {
+            handleDatabaseError(e);
+            return Collections.emptyList();
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
+        }
+    }
+
+    private void handleDatabaseError(Exception e) {
+        logger.log(Level.SEVERE, "Database error occurred", e);
+        dbAvailable = false;
+        startConnectionMonitor();
+    }
+
+    public boolean isDatabaseAvailable() {
+        return dbAvailable;
+    }
 
     public void close() {
-        emf.close();
+        if (connectionMonitor != null) {
+            connectionMonitor.shutdown();
+        }
+        if (emf != null && emf.isOpen()) {
+            emf.close();
+        }
     }
 }

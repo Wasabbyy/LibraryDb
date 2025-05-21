@@ -2,66 +2,72 @@ package com.vse.librarydb.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import com.vse.librarydb.service.ReaderService;
-import com.vse.librarydb.service.BookService;
-import com.vse.librarydb.service.LoanService;
-
 import java.io.IOException;
 
 public class AddReaderController extends BaseController {
-    @FXML
-    private TextField firstNameField;
-    @FXML
-    private TextField lastNameField;
-    @FXML
-    private TextField emailField;
+    @FXML private TextField firstNameField;
+    @FXML private TextField lastNameField;
+    @FXML private TextField emailField;
+    private final ReaderService readerService = new ReaderService();
 
-    private ReaderService readerService;
-    private BookService bookService;
-    private LoanService loanService;
 
     public AddReaderController() {
-        readerService = new ReaderService();
-        bookService = new BookService();
-        loanService = new LoanService();
+        DatabaseStatusMonitor.getInstance().addListener(this);
     }
 
     @FXML
+    public void initialize() {
+        // Set initial status
+        initializeDatabaseStatus();
+    }
+    @FXML
     protected void onAddReaderButtonClick() {
+        if (!readerService.isDatabaseAvailable()) {
+            showAlert(Alert.AlertType.ERROR, "Database Error", "Database Unavailable",
+                    "Cannot add reader while database is unavailable.");
+            return;
+        }
+
         String firstName = firstNameField.getText();
         String lastName = lastNameField.getText();
         String email = emailField.getText();
 
         String result = readerService.addReader(firstName, lastName, email);
+        handleAddResult(result);
+    }
 
+    private void handleAddResult(String result) {
         if (result.startsWith("Validation errors:")) {
-            // Show error alert
-            showAlert(AlertType.ERROR, "Validation Error", "Please fix the following issues:", result);
+            showAlert(Alert.AlertType.ERROR, "Validation Error", "Please fix the following issues:", result);
         } else if (result.equals("Reader added successfully!")) {
-            // Show success alert and clear fields
-            showAlert(AlertType.INFORMATION, "Success", "Reader Added", result);
+            showAlert(Alert.AlertType.INFORMATION, "Success", "Reader Added", result);
             clearFields();
         } else {
-            // Show generic error
-            showAlert(AlertType.ERROR, "Error", "Failed to add reader", result);
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to add reader", result);
         }
+    }
+
+    @Override
+    public void onDatabaseConnected() {
+        super.onDatabaseConnected();
+        // Optionally refresh any data if needed
+    }
+
+    @Override
+    public void onDatabaseDisconnected() {
+        super.onDatabaseDisconnected();
+
     }
 
     @FXML
     protected void onReturnToMenuButtonClick() throws IOException {
+        DatabaseStatusMonitor.getInstance().removeListener(this);
         Stage stage = (Stage) firstNameField.getScene().getWindow();
         super.onReturnToMenuButtonClick(stage);
-    }
-
-    private void showAlert(AlertType type, String title, String header, String content) {
-        Alert alert = new Alert(type);
-        alert.setTitle(title);
-        alert.setHeaderText(header);
-        alert.setContentText(content);
-        alert.showAndWait();
     }
 
     private void clearFields() {
