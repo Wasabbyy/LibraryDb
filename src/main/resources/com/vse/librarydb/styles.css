@@ -188,3 +188,45 @@
     -fx-background-color: #2196F3;
     -fx-text-fill: white;
 }
+/* Search Button Styles */
+.search-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 30px;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+.search-button:hover {
+    -fx-background-color: #2196F3;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 7, 0, 0, 2);
+}
+
+.search-button:pressed {
+    -fx-background-color: #2a4d87;
+}
+
+/* Delete Button Styles */
+.delete-button {
+    -fx-background-color: #d32f2f;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 30px;
+    -fx-background-radius: 5;
+}
+
+.delete-button:hover {
+    -fx-background-color: #c22e2e;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 7, 0, 0, 2);
+}
+
+.delete-button:pressed {
+    -fx-background-color: #b22d2d;
+}

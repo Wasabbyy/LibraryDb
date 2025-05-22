@@ -183,6 +183,31 @@ public class BookService {
     public boolean isDatabaseAvailable() {
         return dbAvailable;
     }
+    public boolean deleteBook(int bookId) {
+        if (!dbAvailable) {
+            return false;
+        }
+
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            Book book = em.find(Book.class, (long) bookId);
+            if (book != null) {
+                em.remove(book);
+                em.getTransaction().commit();
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            handleDatabaseError(e);
+            return false;
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
+        }
+    }
 
     public void close() {
         if (connectionMonitor != null) {

@@ -31,7 +31,8 @@
         <TextField fx:id="searchField" promptText="Search by reader or book title"
                    style="-fx-pref-width: 600; -fx-background-color: #3c3f41; -fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
         <Button text="Search" onAction="#onSearch"
-                style="-fx-background-color: #4a6da7; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 100;"/>
+                styleClass="search-button"
+                style="-fx-pref-width: 100; -fx-pref-height: 30;"/>
     </HBox>
 
     <Button text="Return Selected Book" onAction="#onReturnButtonClick"

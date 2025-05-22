@@ -33,6 +33,11 @@
               layoutX="100" layoutY="100"
               style="-fx-pref-width: 800; -fx-pref-height: 500;-fx-max-height: 250"/>
 
+
+    <Button fx:id="deleteReaderButton" text="Delete Reader"
+            layoutX="820" layoutY="380"
+            styleClass="delete-button"/>
+
     <!-- Search Section -->
     <Label text="Search Readers:" layoutX="100" layoutY="420"
            style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
@@ -41,8 +46,9 @@
                layoutX="100" layoutY="450"
                style="-fx-pref-width: 700; -fx-background-color: #3c3f41; -fx-text-fill: #e0e0e0; -fx-font-size: 14px;"/>
 
+
     <Button text="Search" onAction="#onSearch"
             layoutX="820" layoutY="450"
-            style="-fx-pref-width: 80; -fx-background-color: #4a6da7; -fx-text-fill: white;"/>
+            styleClass="search-button"/>
 
 </Pane>

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import com.vse.librarydb.LibraryApp;
@@ -59,6 +60,14 @@ public class BaseController implements DatabaseStatusMonitor.DatabaseStatusListe
                 onDatabaseDisconnected();
             }
         }
+    }
+    protected boolean showConfirmationDialog(String title, String header, String content) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+
+        return alert.showAndWait().get() == ButtonType.OK;
     }
 
 }

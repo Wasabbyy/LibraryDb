@@ -183,6 +183,31 @@ public class ReaderService {
     public boolean isDatabaseAvailable() {
         return dbAvailable;
     }
+    public boolean deleteReader(int readerId) {
+        if (!dbAvailable) {
+            return false;
+        }
+
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            Reader reader = em.find(Reader.class, (long) readerId);
+            if (reader != null) {
+                em.remove(reader);
+                em.getTransaction().commit();
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            handleDatabaseError(e);
+            return false;
+        } finally {
+            if (em != null && em.isOpen()) {
+                em.close();
+            }
+        }
+    }
 
     public void close() {
         if (connectionMonitor != null) {

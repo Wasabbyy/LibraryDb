@@ -17,9 +17,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ViewBooksController extends BaseController {
-    @FXML private ListView<String> booksListView;
-    @FXML private Button backButton;
-    @FXML private TextField searchField;
+    @FXML
+    private ListView<String> booksListView;
+    @FXML
+    private Button backButton;
+    @FXML
+    private TextField searchField;
+    @FXML
+    private Button deleteBookButton;
 
     private BookService bookService;
     private List<Book> allBooks;
@@ -110,4 +115,36 @@ public class ViewBooksController extends BaseController {
         stage.setHeight(600);
         stage.show();
     }
+
+    // Add this method:
+    @FXML
+    private void onDeleteBook() {
+        int selectedIndex = booksListView.getSelectionModel().getSelectedIndex();
+        if (selectedIndex >= 0 && !allBooks.isEmpty()) {
+            Book selectedBook = allBooks.get(selectedIndex);
+
+            boolean confirm = showConfirmationDialog(
+                    "Delete Book",
+                    "Are you sure you want to delete this book?",
+                    "This will permanently delete '" + selectedBook.getTitle() + "' from the database."
+            );
+
+            if (confirm) {
+                boolean success = bookService.deleteBook(selectedBook.getId().intValue());
+                if (success) {
+                    allBooks.remove(selectedIndex);
+                    refreshBookList(allBooks);
+                    showAlert(Alert.AlertType.INFORMATION, "Success", "Book Deleted",
+                            "The book has been successfully deleted.");
+                } else {
+                    showAlert(Alert.AlertType.ERROR, "Error", "Delete Failed",
+                            "Failed to delete the book from the database. It might be currently loaned.");
+                }
+            }
+        } else {
+            showAlert(Alert.AlertType.WARNING, "No Selection", "No Book Selected",
+                    "Please select a book in the list.");
+        }
+    }
+
 }

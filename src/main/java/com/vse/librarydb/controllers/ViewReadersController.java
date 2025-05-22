@@ -3,6 +3,7 @@ package com.vse.librarydb.controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -23,6 +24,9 @@ public class ViewReadersController extends BaseController {
     @FXML
     private TextField searchField;
 
+    @FXML
+    private Button deleteReaderButton;
+
     private ReaderService readerService;
     private List<Reader> allReaders;
 
@@ -35,6 +39,7 @@ public class ViewReadersController extends BaseController {
         allReaders = readerService.getAllReaders();
         refreshReaderList(allReaders);
         initializeDatabaseStatus();
+        deleteReaderButton.setOnAction(event -> onDeleteReader());
 
         readersListView.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
@@ -90,5 +95,34 @@ public class ViewReadersController extends BaseController {
         stage.setHeight(600);
         stage.setScene(scene);
         stage.show();
+    }
+    @FXML
+    private void onDeleteReader() {
+        int selectedIndex = readersListView.getSelectionModel().getSelectedIndex();
+        if (selectedIndex >= 0) {
+            Reader selectedReader = allReaders.get(selectedIndex);
+
+            boolean confirm = showConfirmationDialog(
+                    "Delete Reader",
+                    "Are you sure you want to delete this reader?",
+                    "This will permanently delete " + selectedReader.getName() + " from the database."
+            );
+
+            if (confirm) {
+                boolean success = readerService.deleteReader(selectedReader.getId().intValue());
+                if (success) {
+                    allReaders.remove(selectedIndex);
+                    refreshReaderList(allReaders);
+                    showAlert(Alert.AlertType.INFORMATION, "Success", "Reader Deleted",
+                            "The reader has been successfully deleted.");
+                } else {
+                    showAlert(Alert.AlertType.ERROR, "Error", "Delete Failed",
+                            "Failed to delete the reader from the database.");
+                }
+            }
+        } else {
+            showAlert(Alert.AlertType.WARNING, "No Selection", "No Reader Selected",
+                    "Please select a reader in the list.");
+        }
     }
 }
