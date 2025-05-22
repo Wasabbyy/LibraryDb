@@ -14,17 +14,16 @@ import com.vse.librarydb.service.LoanService;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class ViewLoansController extends BaseController {
-    @FXML
-    private ListView<String> loansListView;
-    @FXML
-    private Button backButton;
-    @FXML
-    private TextField bookSearchField;
-    @FXML
-    private TextField readerSearchField;
+    private static final Logger logger = Logger.getLogger(ViewLoansController.class.getName());
+
+    @FXML private ListView<String> loansListView;
+    @FXML private Button backButton;
+    @FXML private TextField bookSearchField;
+    @FXML private TextField readerSearchField;
 
     private LoanService loanService;
     private List<Loan> allLoans;
@@ -35,20 +34,22 @@ public class ViewLoansController extends BaseController {
 
     @FXML
     public void initialize() {
+        logger.info("Initializing ViewLoansController");
         allLoans = loanService.getAllLoans();
         refreshLoanList(allLoans);
         initializeDatabaseStatus();
     }
-    private void loadLoans() {
 
+    private void loadLoans() {
+        logger.info("Reloading loan list.");
         allLoans = loanService.getAllLoans();
         refreshLoanList(allLoans);
     }
 
-
     @FXML
     private void onBookSearch() {
         String searchTerm = bookSearchField.getText().toLowerCase();
+        logger.info("Book search performed with term: " + searchTerm);
         List<Loan> filteredLoans = allLoans.stream()
                 .filter(loan -> loan.getBook().getTitle().toLowerCase().contains(searchTerm))
                 .collect(Collectors.toList());
@@ -58,25 +59,15 @@ public class ViewLoansController extends BaseController {
     @FXML
     private void onReaderSearch() {
         String searchTerm = readerSearchField.getText().toLowerCase();
+        logger.info("Reader search performed with term: " + searchTerm);
         List<Loan> filteredLoans = allLoans.stream()
                 .filter(loan -> loan.getReader().getName().toLowerCase().contains(searchTerm))
                 .collect(Collectors.toList());
         refreshLoanList(filteredLoans);
     }
 
-    @Override
-    public void onDatabaseConnected() {
-        super.onDatabaseConnected();
-        loadLoans();
-    }
-
-    @Override
-    public void onDatabaseDisconnected() {
-        super.onDatabaseDisconnected();
-    }
-
-
     private void refreshLoanList(List<Loan> loans) {
+        logger.info("Refreshing loan list.");
         loansListView.getItems().clear();
         for (Loan loan : loans) {
             String loanDetails = "Reader: " + loan.getReader().toString() +
@@ -90,6 +81,7 @@ public class ViewLoansController extends BaseController {
 
     @FXML
     protected void onReturnToMenuButtonClick() throws IOException {
+        logger.info("Returning to ViewData from ViewLoans.");
         FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("/com/vse/librarydb/view-data.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage stage = (Stage) backButton.getScene().getWindow();
@@ -97,5 +89,18 @@ public class ViewLoansController extends BaseController {
         stage.setHeight(600);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @Override
+    public void onDatabaseConnected() {
+        logger.info("Database connected.");
+        super.onDatabaseConnected();
+        loadLoans();
+    }
+
+    @Override
+    public void onDatabaseDisconnected() {
+        logger.warning("Database disconnected.");
+        super.onDatabaseDisconnected();
     }
 }

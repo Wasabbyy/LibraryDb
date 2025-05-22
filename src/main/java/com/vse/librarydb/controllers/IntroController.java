@@ -10,8 +10,12 @@ import com.vse.librarydb.LibraryApp;
 import javafx.event.ActionEvent;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class IntroController {
+    private static final Logger logger = Logger.getLogger(IntroController.class.getName());
+
     @FXML
     private VBox root;
 
@@ -22,8 +26,9 @@ public class IntroController {
             Stage stage = (Stage) root.getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+            logger.info("Loaded scene: " + fxmlFile);
         } catch (IOException e) {
-            System.err.println("Failed to load FXML file: " + fxmlFile);
+            logger.log(Level.SEVERE, "Failed to load FXML file: " + fxmlFile, e);
             throw e;
         }
     }
@@ -52,9 +57,10 @@ public class IntroController {
     protected void onReturnBooksButtonClick() throws IOException {
         loadScene("return-books-view.fxml");
     }
-    // In your IntroController class
+
     @FXML
     private void onExitButtonClick(ActionEvent event) {
+        logger.info("Application exit initiated.");
         Platform.exit();
     }
 }

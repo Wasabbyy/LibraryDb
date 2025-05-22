@@ -1,14 +1,20 @@
 package com.vse.librarydb.controllers;
 
+import com.vse.librarydb.database.DatabaseStatusMonitor;
 import com.vse.librarydb.model.Loan;
 import com.vse.librarydb.model.Book;
 import com.vse.librarydb.service.BookService;
 import com.vse.librarydb.service.LoanService;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class BookDetailsController extends BaseController {
+    private static final Logger logger = Logger.getLogger(BookDetailsController.class.getName());
+
     @FXML private Label bookTitleLabel;
     @FXML private Label bookAuthorLabel;
     @FXML private Label bookYearLabel;
@@ -21,6 +27,7 @@ public class BookDetailsController extends BaseController {
     @FXML private Label titleEditLabel;
     @FXML private Label authorEditLabel;
     @FXML private Label yearEditLabel;
+
     private BookService bookService;
     private LoanService loanService;
     private Book currentBook;
@@ -29,14 +36,17 @@ public class BookDetailsController extends BaseController {
         bookService = new BookService();
         loanService = new LoanService();
         DatabaseStatusMonitor.getInstance().addListener(this);
+        logger.info("BookDetailsController initialized.");
     }
+
     @FXML
     public void initialize() {
-        initializeDatabaseStatus(); // Initialize the status label
+        initializeDatabaseStatus();
     }
 
     public void setBook(Book book) {
         this.currentBook = book;
+        logger.info("Book set for details view: " + book.getTitle());
         updateBookDetails();
         loadLoans();
     }
@@ -49,13 +59,13 @@ public class BookDetailsController extends BaseController {
     }
 
     private void loadLoans() {
-
         loansListView.getItems().clear();
         List<Loan> loans = loanService.getLoansByBook(currentBook);
         for (Loan loan : loans) {
             loansListView.getItems().add("Reader: " + loan.getReader().getFirstName() + " " +
                     loan.getReader().getLastName() + ", Loaned on: " + loan.getLoanDate());
         }
+        logger.info("Loaded loans for book: " + currentBook.getTitle());
     }
 
     @FXML
@@ -63,6 +73,7 @@ public class BookDetailsController extends BaseController {
         if (!bookService.isDatabaseAvailable()) {
             showAlert(Alert.AlertType.ERROR, "Database Error", "Database Unavailable",
                     "Cannot edit book while database is unavailable.");
+            logger.warning("Attempted to edit book while database is unavailable.");
             return;
         }
 
@@ -82,6 +93,7 @@ public class BookDetailsController extends BaseController {
             String validationResult = bookService.validateBook(title, author, year);
             if (!validationResult.equals("Validation successful")) {
                 showAlert(Alert.AlertType.ERROR, "Validation Error", "Please fix the following issues:", validationResult);
+                logger.warning("Book validation failed: " + validationResult);
                 return;
             }
 
@@ -92,9 +104,11 @@ public class BookDetailsController extends BaseController {
             String saveResult = bookService.updateBook(currentBook);
             handleSaveResult(saveResult);
         } catch (NumberFormatException e) {
+            logger.log(Level.SEVERE, "Invalid publication year input.", e);
             showAlert(Alert.AlertType.ERROR, "Invalid Input", "Publication Year must be a number",
                     "Please enter a valid year (e.g., 2023)");
         } catch (Exception e) {
+            logger.log(Level.SEVERE, "Unexpected error during book save.", e);
             showAlert(Alert.AlertType.ERROR, "Error", "An unexpected error occurred", e.getMessage());
         }
     }
@@ -104,8 +118,10 @@ public class BookDetailsController extends BaseController {
             showAlert(Alert.AlertType.INFORMATION, "Success", "Book Updated", result);
             updateBookDetails();
             toggleEditMode(false);
+            logger.info("Book updated successfully.");
         } else {
             showAlert(Alert.AlertType.ERROR, "Error", "Failed to update book", result);
+            logger.warning("Failed to update book: " + result);
         }
     }
 

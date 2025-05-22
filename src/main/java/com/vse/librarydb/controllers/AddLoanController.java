@@ -1,5 +1,6 @@
 package com.vse.librarydb.controllers;
 
+import com.vse.librarydb.database.DatabaseStatusMonitor;
 import com.vse.librarydb.model.Reader;
 import com.vse.librarydb.model.Book;
 import com.vse.librarydb.service.LoanService;
@@ -13,11 +14,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.List;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class AddLoanController extends BaseController {
+    private static final Logger logger = Logger.getLogger(AddLoanController.class.getName());
+
     @FXML private ComboBox<String> readerComboBox;
     @FXML private ComboBox<String> bookComboBox;
     @FXML private TextField daysField;
@@ -27,22 +30,20 @@ public class AddLoanController extends BaseController {
     private final BookService bookService = new BookService();
     private final LoanService loanService = new LoanService();
 
-
-
-
     public AddLoanController() {
         DatabaseStatusMonitor.getInstance().addListener(this);
+        logger.info("AddLoanController initialized.");
     }
 
     @FXML
     public void initialize() {
+        logger.info("Initializing AddLoanController.");
         loadReaders();
         loadBooks();
         initializeDatabaseStatus();
     }
 
     private void loadReaders() {
-
         try {
             List<Reader> readers = readerService.getAllReaders();
             ObservableList<String> readerNames = FXCollections.observableArrayList();
@@ -52,13 +53,16 @@ public class AddLoanController extends BaseController {
                 readerMap.put(fullName, reader.getId().intValue());
             }
             readerComboBox.setItems(readerNames);
+            logger.info("Loaded " + readers.size() + " readers.");
         } catch (Exception e) {
+            logger.log(Level.SEVERE, "Failed to load readers.", e);
             showError("Error loading readers: " + e.getMessage());
         }
     }
 
     private void loadBooks() {
         if (!bookService.isDatabaseAvailable()) {
+            logger.warning("Database unavailable. Cannot load books.");
             showError("Database unavailable. Cannot load books.");
             return;
         }
@@ -72,14 +76,18 @@ public class AddLoanController extends BaseController {
                 bookMap.put(title, book.getId().intValue());
             }
             bookComboBox.setItems(bookTitles);
+            logger.info("Loaded " + books.size() + " books.");
         } catch (Exception e) {
+            logger.log(Level.SEVERE, "Failed to load books.", e);
             showError("Error loading books: " + e.getMessage());
         }
     }
 
     @FXML
     private void onSaveLoanButtonClick() {
+        logger.info("Save Loan button clicked.");
         if (!loanService.isDatabaseAvailable()) {
+            logger.warning("Database unavailable. Cannot create loan.");
             showError("Database unavailable. Cannot create loan.");
             return;
         }
@@ -92,14 +100,17 @@ public class AddLoanController extends BaseController {
             int readerId = readerMap.get(readerComboBox.getValue());
             int bookId = bookMap.get(bookComboBox.getValue());
 
-            Reader reader = readerService.getReaderById((long)readerId);
-            Book book = bookService.getBookById((long)bookId);
+            Reader reader = readerService.getReaderById((long) readerId);
+            Book book = bookService.getBookById((long) bookId);
 
             String result = loanService.addLoan(reader, book, LocalDate.now(), rentPeriodDays);
+            logger.info("LoanService result: " + result);
             handleLoanResult(result);
         } catch (NumberFormatException e) {
+            logger.log(Level.SEVERE, "Invalid number format for loan duration.", e);
             showError("Please enter a valid number for loan duration");
         } catch (Exception e) {
+            logger.log(Level.SEVERE, "Error creating loan.", e);
             showError("Error creating loan: " + e.getMessage());
         }
     }
@@ -118,23 +129,13 @@ public class AddLoanController extends BaseController {
 
     private void handleLoanResult(String result) {
         if (result.equals("Loan added successfully!")) {
+            logger.info("Loan added successfully.");
             showSuccess("Loan created successfully!");
             clearFields();
         } else {
+            logger.warning("Loan creation failed: " + result);
             showError(result);
         }
-    }
-
-    @Override
-    public void onDatabaseConnected() {
-        super.onDatabaseConnected();
-        loadReaders();
-        loadBooks();
-    }
-
-    @Override
-    public void onDatabaseDisconnected() {
-        super.onDatabaseDisconnected();
     }
 
     @FXML
@@ -142,6 +143,7 @@ public class AddLoanController extends BaseController {
         DatabaseStatusMonitor.getInstance().removeListener(this);
         Stage stage = (Stage) readerComboBox.getScene().getWindow();
         super.onReturnToMenuButtonClick(stage);
+        logger.info("Returning to main menu from AddLoanController.");
     }
 
     private void clearFields() {

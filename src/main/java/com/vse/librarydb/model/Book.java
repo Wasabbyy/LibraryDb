@@ -60,7 +60,7 @@ public class Book {
         return available;
     }
 
-    // Setters (optional, if needed)
+    // Setters
     public void setTitle(String title) {
         this.title = title;
     }

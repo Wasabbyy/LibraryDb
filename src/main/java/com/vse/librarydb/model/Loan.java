@@ -53,7 +53,7 @@ public class Loan {
         this.rentPeriodDays = rentPeriodDays;
     }
 
-    // Getters and Setters
+    // Getters  Setters
     public Long getId() {
         return id;
     }

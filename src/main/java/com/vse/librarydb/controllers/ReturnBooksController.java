@@ -7,18 +7,16 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class ReturnBooksController extends BaseController {
-    @FXML
-    private ListView<String> loanedBooksListView;
-    @FXML
-    private Button returnButton;
-    @FXML
-    private TextField searchField;
+    private static final Logger LOGGER = Logger.getLogger(ReturnBooksController.class.getName());
+
+    @FXML private ListView<String> loanedBooksListView;
+    @FXML private Button returnButton;
+    @FXML private TextField searchField;
 
     private final LoanService loanService = new LoanService();
     private List<Loan> loanedBooks;
@@ -30,12 +28,13 @@ public class ReturnBooksController extends BaseController {
         refreshLoanedBooksList(allLoanedBooks);
         initializeDatabaseStatus();
 
-        // Add double-click to view note
         loanedBooksListView.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
                 viewNoteForSelectedBook();
             }
         });
+
+        LOGGER.info("ReturnBooksController initialized.");
     }
 
     private void loadAllLoanedBooks() {
@@ -43,30 +42,29 @@ public class ReturnBooksController extends BaseController {
                 .filter(loan -> loan.getReturnDate() == null)
                 .collect(Collectors.toList());
         loanedBooks = new ArrayList<>(allLoanedBooks);
+        LOGGER.info("Loaded " + loanedBooks.size() + " unreturned books.");
     }
 
     private void refreshLoanedBooksList(List<Loan> loans) {
         loanedBooksListView.getItems().clear();
         for (Loan loan : loans) {
-            String noteIndicator = loan.getBook().getNote() != null ? " (Has note)" : "";
-            loanedBooksListView.getItems().add(
-                    "Reader: " + loan.getReader().getName() +
-                            " | Book: " + loan.getBook().getTitle() +
-                            " | Loaned on: " + loan.getLoanDate() +
-                            noteIndicator
-            );
+            String note = loan.getBook().getNote() != null ? " (Has note)" : "";
+            loanedBooksListView.getItems().add("Reader: " + loan.getReader().getName() +
+                    " | Book: " + loan.getBook().getTitle() +
+                    " | Loaned on: " + loan.getLoanDate() + note);
         }
     }
 
     @FXML
     private void onSearch() {
         String searchTerm = searchField.getText().toLowerCase();
-        List<Loan> filteredLoans = allLoanedBooks.stream()
-                .filter(loan -> loan.getReader().getName().toLowerCase().contains(searchTerm) ||
-                        loan.getBook().getTitle().toLowerCase().contains(searchTerm))
+        List<Loan> filtered = allLoanedBooks.stream()
+                .filter(loan -> loan.getReader().getName().toLowerCase().contains(searchTerm)
+                        || loan.getBook().getTitle().toLowerCase().contains(searchTerm))
                 .collect(Collectors.toList());
-        loanedBooks = new ArrayList<>(filteredLoans);
+        loanedBooks = new ArrayList<>(filtered);
         refreshLoanedBooksList(loanedBooks);
+        LOGGER.info("Search performed with term: " + searchTerm);
     }
 
     @FXML
@@ -74,6 +72,8 @@ public class ReturnBooksController extends BaseController {
         int selectedIndex = loanedBooksListView.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
             showReturnDialog(loanedBooks.get(selectedIndex));
+        } else {
+            LOGGER.warning("No book selected to return.");
         }
     }
 
@@ -85,10 +85,11 @@ public class ReturnBooksController extends BaseController {
 
         Optional<String> result = dialog.showAndWait();
         result.ifPresent(note -> {
-            String resultMessage = loanService.returnBook(loan.getId(), note);
-            showAlert("Return Status", resultMessage, Alert.AlertType.INFORMATION);
-            loadAllLoanedBooks(); // Refresh the list
-            onSearch(); // Reapply current filter
+            String message = loanService.returnBook(loan.getId(), note);
+            showAlert("Return Status", message, Alert.AlertType.INFORMATION);
+            loadAllLoanedBooks();
+            onSearch();
+            LOGGER.info("Returned book: " + loan.getBook().getTitle());
         });
     }
 
@@ -97,9 +98,7 @@ public class ReturnBooksController extends BaseController {
         if (selectedIndex >= 0) {
             Loan loan = loanedBooks.get(selectedIndex);
             String note = loan.getBook().getNote();
-            showAlert("Book Note",
-                    note != null ? note : "No note available",
-                    Alert.AlertType.INFORMATION);
+            showAlert("Book Note", note != null ? note : "No note available", Alert.AlertType.INFORMATION);
         }
     }
 

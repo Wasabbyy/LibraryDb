@@ -1,5 +1,6 @@
 package com.vse.librarydb.controllers;
 
+import com.vse.librarydb.database.DatabaseStatusMonitor;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,19 +12,29 @@ import javafx.stage.Stage;
 import com.vse.librarydb.LibraryApp;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class BaseController implements DatabaseStatusMonitor.DatabaseStatusListener {
+    private static final Logger logger = Logger.getLogger(BaseController.class.getName());
+
     @FXML
     protected Label databaseStatusLabel;
 
     @FXML
     protected void onReturnToMenuButtonClick(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("intro-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setScene(scene);
-        stage.setWidth(1000);
-        stage.setHeight(600);
-        stage.show();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(LibraryApp.class.getResource("intro-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+            stage.setScene(scene);
+            stage.setWidth(1000);
+            stage.setHeight(600);
+            stage.show();
+            logger.info("Returned to main menu.");
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "Failed to return to menu.", e);
+            throw e;
+        }
     }
 
     @Override
@@ -31,7 +42,7 @@ public class BaseController implements DatabaseStatusMonitor.DatabaseStatusListe
         if (databaseStatusLabel != null) {
             databaseStatusLabel.setText("Database: Connected");
             databaseStatusLabel.setStyle("-fx-text-fill: green; -fx-font-weight: bold;");
-
+            logger.info("Database connected.");
         }
     }
 
@@ -40,8 +51,9 @@ public class BaseController implements DatabaseStatusMonitor.DatabaseStatusListe
         if (databaseStatusLabel != null) {
             databaseStatusLabel.setText("Database: Disconnected");
             databaseStatusLabel.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
-            showAlert(Alert.AlertType.WARNING, "Warning", "Database Disconnected",
+            showAlert(AlertType.WARNING, "Warning", "Database Disconnected",
                     "Working in offline mode. Changes won't be saved until reconnected.");
+            logger.warning("Database disconnected.");
         }
     }
 
@@ -51,7 +63,9 @@ public class BaseController implements DatabaseStatusMonitor.DatabaseStatusListe
         alert.setHeaderText(header);
         alert.setContentText(content);
         alert.showAndWait();
+        logger.info("Alert shown: " + title + " - " + header);
     }
+
     protected void initializeDatabaseStatus() {
         if (databaseStatusLabel != null) {
             if (DatabaseStatusMonitor.getInstance().isDatabaseAvailable()) {
@@ -61,13 +75,13 @@ public class BaseController implements DatabaseStatusMonitor.DatabaseStatusListe
             }
         }
     }
+
     protected boolean showConfirmationDialog(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(content);
-
+        logger.info("Confirmation dialog shown: " + title);
         return alert.showAndWait().get() == ButtonType.OK;
     }
-
 }
