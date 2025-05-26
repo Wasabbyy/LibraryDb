@@ -1749,3 +1749,66 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	... 80 more
 2025-05-26 17:59:02.377 [JavaFX Application Thread] DEBUG ReaderService - Starting database connection monitor
 2025-05-26 17:59:02.380 [JavaFX Application Thread] WARN  ReaderService - Attempt to get all readers while database unavailable
+2025-05-26 18:03:05.588 [JavaFX Application Thread] INFO  LoanService - Initializing LoanService...
+2025-05-26 18:03:05.648 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-05-26 18:03:05.674 [JavaFX Application Thread] INFO  Version - HHH000412: Hibernate ORM core version [WORKING]
+2025-05-26 18:03:05.692 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 18:03:05.814 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-26 18:03:05.815 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-05-26 18:03:05.815 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:tcp://localhost/~/test]
+2025-05-26 18:03:05.815 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-05-26 18:03:05.815 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-05-26 18:03:05.817 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-05-26 18:03:05.933 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 18:03:06.235 [JavaFX Application Thread] INFO  Version - HV000001: Hibernate Validator null
+2025-05-26 18:03:06.673 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 18:03:06.683 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5d4e0b7e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-26 18:03:06.705 [JavaFX Application Thread] DEBUG LoanService - Validator and EntityManagerFactory initialized successfully
+2025-05-26 18:03:06.705 [JavaFX Application Thread] DEBUG LoanService - Starting database connection monitor
+2025-05-26 18:03:06.719 [JavaFX Application Thread] DEBUG LoanService - Fetching all loans
+2025-05-26 18:03:06.924 [JavaFX Application Thread] DEBUG LoanService - Fetched 0 loans
+2025-05-26 18:03:21.053 [JavaFX Application Thread] INFO  ReaderService - Initializing ReaderService...
+2025-05-26 18:03:21.055 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-05-26 18:03:21.056 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 18:03:21.070 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-26 18:03:21.071 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-05-26 18:03:21.071 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:tcp://localhost/~/test]
+2025-05-26 18:03:21.071 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-05-26 18:03:21.071 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-05-26 18:03:21.071 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-05-26 18:03:21.075 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 18:03:21.121 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 18:03:21.121 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@606a2d0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-26 18:03:21.128 [JavaFX Application Thread] DEBUG ReaderService - Validator and EntityManagerFactory initialized successfully
+2025-05-26 18:03:21.128 [JavaFX Application Thread] DEBUG ReaderService - Starting database connection monitor
+2025-05-26 18:03:29.165 [JavaFX Application Thread] INFO  ReaderService - Attempting to add new reader: sadada asdasd, email: asdasd
+2025-05-26 18:03:29.165 [JavaFX Application Thread] DEBUG ReaderService - Validating reader: firstName=sadada, lastName=asdasd, email=asdasd
+2025-05-26 18:03:29.175 [JavaFX Application Thread] WARN  ReaderService - Reader validation failed: Validation errors:
+email: Email must be in a valid format
+
+2025-05-26 18:03:39.496 [JavaFX Application Thread] INFO  ReaderService - Attempting to add new reader: sadada asdasd, email: asdasd@seznam.cz
+2025-05-26 18:03:39.496 [JavaFX Application Thread] DEBUG ReaderService - Validating reader: firstName=sadada, lastName=asdasd, email=asdasd@seznam.cz
+2025-05-26 18:03:39.504 [JavaFX Application Thread] DEBUG ReaderService - Reader validation successful
+2025-05-26 18:03:39.526 [JavaFX Application Thread] INFO  ReaderService - Successfully added reader with ID: 34
+2025-05-26 18:03:57.798 [JavaFX Application Thread] INFO  ReaderService - Attempting to add new reader: sadas asdasd, email: fdsgfs@seznam.cz
+2025-05-26 18:03:57.798 [JavaFX Application Thread] DEBUG ReaderService - Validating reader: firstName=sadas, lastName=asdasd, email=fdsgfs@seznam.cz
+2025-05-26 18:03:57.798 [JavaFX Application Thread] DEBUG ReaderService - Reader validation successful
+2025-05-26 18:03:57.801 [JavaFX Application Thread] INFO  ReaderService - Successfully added reader with ID: 35
+2025-05-26 18:04:02.359 [JavaFX Application Thread] INFO  BookService - Initializing BookService...
+2025-05-26 18:04:02.361 [JavaFX Application Thread] INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: LibraryDBPU]
+2025-05-26 18:04:02.362 [JavaFX Application Thread] INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-26 18:04:02.375 [JavaFX Application Thread] WARN  pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2025-05-26 18:04:02.375 [JavaFX Application Thread] INFO  pooling - HHH10001005: Loaded JDBC driver class: org.h2.Driver
+2025-05-26 18:04:02.375 [JavaFX Application Thread] INFO  pooling - HHH10001012: Connecting with JDBC URL [jdbc:h2:tcp://localhost/~/test]
+2025-05-26 18:04:02.376 [JavaFX Application Thread] INFO  pooling - HHH10001001: Connection properties: {password=****, user=sa}
+2025-05-26 18:04:02.376 [JavaFX Application Thread] INFO  pooling - HHH10001003: Autocommit mode: false
+2025-05-26 18:04:02.376 [JavaFX Application Thread] INFO  pooling - HHH10001115: Connection pool size: 20 (min=1)
+2025-05-26 18:04:02.379 [JavaFX Application Thread] WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26 18:04:02.421 [JavaFX Application Thread] INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26 18:04:02.421 [JavaFX Application Thread] INFO  access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@624e4595] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2025-05-26 18:04:02.427 [JavaFX Application Thread] DEBUG BookService - Validator and EntityManagerFactory initialized successfully
+2025-05-26 18:04:02.427 [JavaFX Application Thread] DEBUG BookService - Starting database connection monitor
+2025-05-26 18:04:13.869 [JavaFX Application Thread] INFO  BookService - Attempting to add new book: sadasd by asdasdasd (2562)
+2025-05-26 18:04:13.870 [JavaFX Application Thread] DEBUG BookService - Validating book: title=sadasd, author=asdasdasd, year=2562
+2025-05-26 18:04:13.873 [JavaFX Application Thread] DEBUG BookService - Book validation successful
+2025-05-26 18:04:13.876 [JavaFX Application Thread] INFO  BookService - Successfully added book with ID: 1
