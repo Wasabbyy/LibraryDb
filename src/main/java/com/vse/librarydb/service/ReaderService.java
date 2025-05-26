@@ -248,13 +248,4 @@ public class ReaderService {
         }
     }
 
-    public void close() {
-        logger.info("Shutting down ReaderService resources");
-        if (connectionMonitor != null) {
-            connectionMonitor.shutdown();
-        }
-        if (emf != null && emf.isOpen()) {
-            emf.close();
-        }
-    }
 }

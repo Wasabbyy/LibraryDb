@@ -1,0 +1,137 @@
+[33mcommit ec5ecbad65d4c54305044bf7b8ca9247ea2300d4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Thu May 22 12:10:09 2025 +0200
+
+    Adding better logging
+
+[33mcommit 7a559597773f3e736481e5aa23dbaeda1df3a36f[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Thu May 22 11:54:27 2025 +0200
+
+    Adding delete function and finallazing
+
+[33mcommit ef195617f53c7efa1dbc7bec1f969c54a1fc4ec3[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Thu May 22 01:06:04 2025 +0200
+
+    adding database disconnect fixing
+
+[33mcommit df5d92a691fc4b7f248fec9d2af3fe19b301416d[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Wed May 21 13:15:58 2025 +0200
+
+    Adding filtering
+
+[33mcommit ad14e2e3f732f2e2e06802ef7ea7e2ecba3e8404[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Sun Apr 20 19:32:42 2025 +0200
+
+    Fixing gui
+
+[33mcommit 7318efe31373f4a80f5b43a2726631cb8fc38c59[m
+Author: Wassabbyy <f.stupar@seznam.cz>
+Date:   Sat Apr 19 14:55:44 2025 +0200
+
+    Adding upgraded loan selection
+
+[33mcommit 13495634757d4ad76641d8fe0480774c4244208a[m
+Author: Wassabbyy <f.stupar@seznam.cz>
+Date:   Sat Apr 19 12:14:17 2025 +0200
+
+    Adding note function and some more GUI tweaks
+
+[33mcommit 8a5651a5db1fdf83f4ff342adca1ac77dbf02b7a[m
+Author: Wassabbyy <f.stupar@seznam.cz>
+Date:   Fri Apr 18 23:14:36 2025 +0200
+
+    Late night playing with gui instead of my PYthon
+
+[33mcommit 52e3435237925d005bd3d42f81fa097561fe7cb6[m
+Author: Wassabbyy <f.stupar@seznam.cz>
+Date:   Fri Apr 18 22:48:08 2025 +0200
+
+    Playing with GUI and adding checks to edit
+
+[33mcommit 7d4a36d5e3feb610f7cb44a36baf826a7ca192c8[m
+Author: Wassabbyy <f.stupar@seznam.cz>
+Date:   Fri Apr 18 20:25:31 2025 +0200
+
+    Adding intro picture
+
+[33mcommit 49d52de211fda2f4a0170c5f3993d1e3ad10d70a[m
+Author: Wassabbyy <f.stupar@seznam.cz>
+Date:   Fri Apr 18 18:29:50 2025 +0200
+
+    Adding bit more formating adn theme to the app (note for me - still need main menu fix and viewlist fix)
+
+[33mcommit c821636758500eeee024e9197bebda4f6bf89081[m
+Author: Wassabbyy <f.stupar@seznam.cz>
+Date:   Fri Apr 18 17:43:58 2025 +0200
+
+    Adding validator and error managment for invalid inputs
+
+[33mcommit d5f15e401802f5ec48ede4499808118755a4830e[m
+Author: Wassabbyy <f.stupar@seznam.cz>
+Date:   Fri Apr 18 17:43:12 2025 +0200
+
+    Adding validator and error managment for invalid inputs
+
+[33mcommit 150c72721b189916c4111d0435b02209746d719a[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Fri Apr 11 18:02:06 2025 +0200
+
+    Adding delayed functionality
+
+[33mcommit 8502f043a81d3fdb0cd28783fcfa1b5c82f8bf24[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Fri Apr 11 17:43:21 2025 +0200
+
+    Adding function to return books and for availabilty state to be linked with loans
+
+[33mcommit 5b338fc5251c397761ec87aae112b1c4d51ecb37[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Thu Apr 10 14:15:07 2025 +0200
+
+    Adding edit button
+
+[33mcommit a0cb844f8b329384617158ebdef0effb0c57758e[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Wed Apr 9 16:31:54 2025 +0200
+
+    Adding feature to see details for reader/book and information about the loans for it
+
+[33mcommit 985214ed5a1b864d6b85c5d708c2a89b8c237898[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Tue Apr 8 15:50:15 2025 +0200
+
+    renaming and fixing maven
+
+[33mcommit 828ad83ec901124ade2abc743c4acdaf8dc09ff3[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Tue Apr 8 15:06:02 2025 +0200
+
+    Setting up the view for the tables in the application itself
+
+[33mcommit ca688e8af209b6fc72674b975aa120eba9b52662[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Mon Apr 7 16:08:36 2025 +0200
+
+    Adding basic functionality to add the data into the database
+
+[33mcommit 66e33327fc8011fc2940620dc230e4cdc70866a1[m
+Author: Wasabbyy <f.stupar@seznam.cz>
+Date:   Sat Mar 29 14:59:32 2025 +0100
+
+    Setting up the db-it works now
+
+[33mcommit 6eaa2a44d2562b52a8d6de73ae2589388cadce4a[m
+Author: Wassabbyy <f.stupar@seznam.cz>
+Date:   Sat Mar 29 14:05:38 2025 +0100
+
+    set up of db
+
+[33mcommit f9a12cadcc9e40697a58a3df73fb672d9d6d69a8[m
+Author: Wassabbyy <f.stupar@seznam.cz>
+Date:   Fri Mar 28 14:31:09 2025 +0100
+
+    innitial commit

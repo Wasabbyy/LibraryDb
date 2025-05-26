@@ -249,13 +249,4 @@ public class BookService {
         }
     }
 
-    public void close() {
-        logger.info("Shutting down BookService resources");
-        if (connectionMonitor != null) {
-            connectionMonitor.shutdown();
-        }
-        if (emf != null && emf.isOpen()) {
-            emf.close();
-        }
-    }
 }

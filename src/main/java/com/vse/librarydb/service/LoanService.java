@@ -248,14 +248,4 @@ public class LoanService {
     public boolean isDatabaseAvailable() {
         return dbAvailable;
     }
-
-    public void close() {
-        logger.info("Shutting down LoanService resources");
-        if (connectionMonitor != null) {
-            connectionMonitor.shutdown();
-        }
-        if (emf != null && emf.isOpen()) {
-            emf.close();
-        }
-    }
 }
